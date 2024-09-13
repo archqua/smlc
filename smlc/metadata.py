@@ -1,28 +1,24 @@
-"""
-Metadata module.
-"""
+"""Metadata module."""
 
 __docformat__ = "numpy"
+import json
 from dataclasses import dataclass
 from dataclasses import field as dc_field
-import json
 from typing import Any, Dict, List, NamedTuple, Optional, Set, Union
-from urllib.parse import ParseResult as UrlParseResult, SplitResult as UrlSplitResult
+from urllib.parse import ParseResult as UrlParseResult
+from urllib.parse import SplitResult as UrlSplitResult
 from urllib.parse import urlparse, urlsplit, urlunparse, urlunsplit
 
 import pandas as pd
 
 import smlc.type as T
 
-
 ParsedURL = Union[UrlParseResult, UrlSplitResult]
 """See `MetadataManager` constructor."""
 
 
 class MetadataManager:
-    """
-    Metadata manager.
-    """
+    """Metadata manager."""
 
     def __init__(
         self,
@@ -163,10 +159,10 @@ class MetadataManager:
         turl: Union[str, ParsedURL],
         **kwargs,
     ) -> "KnowledgeBaseForTable":
-        """
-        Convenient factory for `KnowledgeBaseForTable`.
-        `mm.knowledge_base_for_table(turl, **kwargs)` is equivalent of `KnowledgeBaseForTable(mm, turl, **kwargs)`.
-        If table is not registered, registers table.
+        """Convenient factory for `KnowledgeBaseForTable`.
+        `mm.knowledge_base_for_table(turl, **kwargs)` is equivalent of
+        `KnowledgeBaseForTable(mm, turl, **kwargs)`. If table is not registered,
+        registers table.
 
         Parameters
         ----------
@@ -188,11 +184,10 @@ class MetadataManager:
 
 
 class KnowledgeBaseForTable:
-    """
-    Knowledge base for single table.
+    """Knowledge base for single table.
 
-    Attributes are computed on-demand (lazy evaluation) and then stored.
-    If you want to recompute an attribute, delete (`del knowledge_base.attr`) and re-evaluate it.
+    Attributes are computed on-demand (lazy evaluation) and then stored. If you want to
+    recompute an attribute, delete (`del knowledge_base.attr`) and re-evaluate it.
     """
 
     def __init__(
@@ -201,8 +196,7 @@ class KnowledgeBaseForTable:
         turl: Union[str, ParsedURL],
         unregister_table_on_deletion: bool = False,
     ):
-        """
-        Calling `MetadataManager`.`knowledge_base_for_table` factory is preferable.
+        """Calling `MetadataManager`.`knowledge_base_for_table` factory is preferable.
 
         Parameters
         ----------

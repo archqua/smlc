@@ -1,0 +1,19 @@
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.env
+  | \.mypy_cache
+  | _build
+  | build
+  | dist
+  | blib2to3
+  | tests/data
+)/
+'''
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+[tool.docformatter]
+black = true

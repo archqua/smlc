@@ -1,18 +1,16 @@
-"""
-Typing utilities that can help to define what a column type is.
-"""
+"""Typing utilities that can help to define what a column type is."""
 
 __docformat__ = "numpy"
 from abc import ABC, abstractmethod
-from enum import StrEnum, ReprEnum, auto
+from enum import ReprEnum, StrEnum, auto
 from typing import Any, Type, Union
 
 
 class PhysicalType(StrEnum):
-    """
-    Physical type.
-    64-, 32-, 16- and 8-bit signed and unsigned integers and floats; ASCII- and UTF8-strings.
+    """Physical type.
 
+    64-, 32-, 16- and 8-bit signed and unsigned integers and floats; ASCII- and
+    UTF8-strings.
     """
 
     i64 = auto()
@@ -46,15 +44,21 @@ class PhysicalType(StrEnum):
 
 
 class LogicalType(StrEnum):
-    """
-    Logical type.
+    """Logical type.
+
     Natural number, integer, real number, text, boolean, enum, time and timedelta.
     """
 
     boolean = auto()
-    """True or false (exclusive). Allows negation, conjunction and disjunction."""
+    """True or false (exclusive).
+
+    Allows negation, conjunction and disjunction.
+    """
     enum = auto()
-    """Several possible values. No arithmetic. No order."""
+    """Several possible values.
+
+    No arithmetic. No order.
+    """
     natural = auto()
     """Non-negative integers."""
     integer = auto()
@@ -62,14 +66,20 @@ class LogicalType(StrEnum):
     real = auto()
     """Real numbers."""
     text = auto()
-    """
-    Text/string that consists of individual characters.
+    """Text/string that consists of individual characters.
+
     Allows substring search, concatenation and manipulation with register.
     """
     time = auto()
-    """Time. `time_1 - time_0 = timedelta`."""
+    """Time.
+
+    `time_1 - time_0 = timedelta`.
+    """
     timedelta = auto()
-    """Timedelta. `time_0 + timedelta = time_1`."""
+    """Timedelta.
+
+    `time_0 + timedelta = time_1`.
+    """
 
 
 # TODO
@@ -78,21 +88,20 @@ class SemanticType(StrEnum):
 
 
 class ValueConstraint(ABC):
-    """
-    Value constraint abstract base class.
-    """
+    """Value constraint abstract base class."""
 
     def __init__(self, *args, **kwargs) -> None:
         pass
 
     @abstractmethod
     def is_valid(self, value) -> Union[bool, Any]:
-        """
-        Has a terse `__call__` alias:
+        """Has a terse `__call__` alias:
 
-        `value_constraint(value) == value_constraint.is_valid(value) $\\forall$ value`.
+        `value_constraint(value)` is equivalent to
+        `value_constraint.is_valid(value)`.
 
-        Non-bool return-values are for specific implementation purposes -- please ignore.
+        Non-bool return-values are for specific implementation purposes
+        -- please ignore.
         """
         return True
 
@@ -101,8 +110,7 @@ class ValueConstraint(ABC):
 
 
 class AnyValue(ValueConstraint):
-    """
-    Any value is valid value.
+    """Any value is valid value.
 
     >>> av = AnyValue()
     >>> av(1)
@@ -122,8 +130,7 @@ class AnyValue(ValueConstraint):
 
 
 class And(ValueConstraint):
-    """
-    Valid value must satisfy all constraints.
+    """Valid value must satisfy all constraints.
 
     >>> r = And(NotEqual(1), NotEqual(2), NotEqual(3))
     >>> r(0)
@@ -176,8 +183,7 @@ class And(ValueConstraint):
 
 
 class Or(ValueConstraint):
-    """
-    Valid value must satisfy any of constraints.
+    """Valid value must satisfy any of constraints.
 
     >>> r = Or(Equal(1), Equal(2), Equal(3))
     >>> r(0)
@@ -230,8 +236,7 @@ class Or(ValueConstraint):
 
 
 class Not(ValueConstraint):
-    """
-    Negation.
+    """Negation.
 
     >>> r = Not(Equal(1))
     >>> r(0)
@@ -251,9 +256,8 @@ class Not(ValueConstraint):
 
 
 class Xor(ValueConstraint):
-    """
-    Valid value must satisfy uneven number of constraints.
-    If `allow_uneven = True` valid value must satisfy exactly one constraint.
+    """Valid value must satisfy uneven number of constraints. If `allow_uneven = True`
+    valid value must satisfy exactly one constraint.
 
     >>> r = Xor(ValidRange(0, 2), ValidRange(1, 3))
     >>> r(-1)
@@ -295,8 +299,7 @@ class Xor(ValueConstraint):
 
 
 class Equal(ValueConstraint):
-    """
-    Only this value is valid value.
+    """Only this value is valid value.
 
     >>> r = Equal(1)
     >>> r(0)
@@ -316,8 +319,7 @@ class Equal(ValueConstraint):
 
 
 class IsIn(ValueConstraint):
-    """
-    Only these values are valid values.
+    """Only these values are valid values.
 
     >>> r = IsIn(1, 2, 3)
     >>> r(0)
@@ -353,8 +355,7 @@ class IsIn(ValueConstraint):
 
 
 class NotEqual(ValueConstraint):
-    """
-    Any value except this value is valid value.
+    """Any value except this value is valid value.
 
     >>> r = NotEqual(1)
     >>> r(0)
@@ -374,8 +375,7 @@ class NotEqual(ValueConstraint):
 
 
 class IsNotIn(ValueConstraint):
-    """
-    Any value except these values is valid value.
+    """Any value except these values is valid value.
 
     >>> r = IsNotIn(1, 2, 3)
     >>> r(0)
@@ -411,9 +411,7 @@ class IsNotIn(ValueConstraint):
 
 
 class GreaterThan(ValueConstraint):
-    """
-    Valid value must be greater than this value.
-    NOT STRICT (>=) by default.
+    """Valid value must be greater than this value. NOT STRICT (>=) by default.
 
     >>> r = GreaterThan(1)
     >>> r(0)
@@ -437,9 +435,7 @@ class GreaterThan(ValueConstraint):
 
 
 class LessThan(ValueConstraint):
-    """
-    Valid value must be less than this value.
-    Strict (<) by default.
+    """Valid value must be less than this value. Strict (<) by default.
 
     >>> r = LessThan(1)
     >>> r(0)
@@ -460,8 +456,7 @@ class LessThan(ValueConstraint):
 
 
 class ValidRange(ValueConstraint):
-    """
-    Valid value must belong to [lo, hi) range, meaning `lo <= valid_value < hi`.
+    """Valid value must belong to [lo, hi) range, meaning `lo <= valid_value < hi`.
     Strictness of the boundaries is configurable.
 
     >>> r = ValidRange(1, 3)
@@ -491,9 +486,8 @@ class ValidRange(ValueConstraint):
 
 
 class InvalidRange(ValueConstraint):
-    """
-    Valid value must not belong to [lo, hi) range, meaning either `valid_value < lo` or `valid_value >= hi`.
-    Strictness of the boundaries is configurable.
+    """Valid value must not belong to [lo, hi) range, meaning either `valid_value < lo`
+    or `valid_value >= hi`. Strictness of the boundaries is configurable.
 
     >>> r = InvalidRange(1, 3)
     >>> r(0)
@@ -522,11 +516,9 @@ class InvalidRange(ValueConstraint):
 
 
 class _Compose(ValueConstraint):
-    """
-    Compose value constraints.
-    This is a workaround to implement length constraint for strings.
-    We can override `is_valid` semantics to return int, not bool.
-    Then we can pass this int to other value constraints and eventually get bool.
+    """Compose value constraints. This is a workaround to implement length constraint
+    for strings. We can override `is_valid` semantics to return int, not bool. Then we
+    can pass this int to other value constraints and eventually get bool.
 
     >>> r = _Compose(Equal(2), _Length())
     >>> r("a")
@@ -564,9 +556,7 @@ class _Compose(ValueConstraint):
 
 
 class _Length(ValueConstraint):
-    """
-    Compute length.
-    `is_valid` returns int, not bool.
+    """Compute length. `is_valid` returns int, not bool.
 
     >>> r = _Length()
     >>> r("a")
@@ -602,9 +592,8 @@ class LengthEqual(ValueConstraint):
 
 
 class LengthGreaterThan(ValueConstraint):
-    """
-    Value is valid if its length is greater than specified.
-    NOT STRICT (>=) by default.
+    """Value is valid if its length is greater than specified. NOT STRICT (>=) by
+    default.
 
     >>> r = LengthGreaterThan(2)
     >>> r("a")
@@ -627,9 +616,7 @@ class LengthGreaterThan(ValueConstraint):
 
 
 class LengthLessThan(ValueConstraint):
-    """
-    Value is valid if its length is less than specified.
-    Strict (<) by default.
+    """Value is valid if its length is less than specified. Strict (<) by default.
 
     >>> r = LengthLessThan(2)
     >>> r("a")
@@ -652,9 +639,8 @@ class LengthLessThan(ValueConstraint):
 
 
 class LengthValidRange(ValueConstraint):
-    """
-    Value is valid if its length belongs to [lo, hi) range, meaning `lo <= len(valid_value) < hi`.
-    Strictness of the boundaries is configurable.
+    """Value is valid if its length belongs to [lo, hi) range, meaning `lo <=
+    len(valid_value) < hi`. Strictness of the boundaries is configurable.
 
     >>> r = LengthValidRange(1, 3)
     >>> r("")
