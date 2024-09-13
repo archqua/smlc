@@ -1,1 +1,2 @@
-# Seamless Machine Learning Cooperation
+# smlc
+Simple Machine Learning Cooperation
