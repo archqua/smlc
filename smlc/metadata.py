@@ -1,3 +1,7 @@
+"""
+Metadata module.
+"""
+
 __docformat__ = "numpy"
 from dataclasses import dataclass
 from dataclasses import field as dc_field
@@ -10,10 +14,6 @@ import pandas as pd
 
 import smlc.type as T
 
-
-"""
-Metadata module.
-"""
 
 ParsedURL = Union[UrlParseResult, UrlSplitResult]
 """See `MetadataManager` constructor."""
@@ -245,6 +245,7 @@ class KnowledgeBaseForTable:
     def turl(self) -> ParsedURL:
         """Table URL (parsed)."""
         return self._turl
+
 
 #     @property
 #     def n_rows(self) -> int:

@@ -121,7 +121,7 @@
                     <h1 class="modulename">
 <a href="./../smlc.html">smlc</a><wbr>.metadata    </h1>
 
-                
+
                         <input id="mod-metadata-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
                         <label class="view-source-button" for="mod-metadata-view-source"><span>View Source</span></label>
@@ -364,7 +364,7 @@
                 <section id="MetadataManager">
                             <input id="MetadataManager-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
-            
+
     <span class="def">class</span>
     <span class="name">MetadataManager</span>:
 
@@ -507,7 +507,7 @@
                             <div id="MetadataManager.register_table" class="classattr">
                                         <input id="MetadataManager.register_table-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="def">def</span>
         <span class="name">register_table</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span>,</span><span class="param">	<span class="n">table</span>,</span><span class="param">	<span class="n">table_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">occlusion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;raise&#39;</span>,</span><span class="param">	<span class="n">n_candidates</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span></span><span class="return-annotation">) -> <span class="nb">int</span>:</span></span>
 
@@ -579,7 +579,7 @@
                             <div id="MetadataManager.unregister_table" class="classattr">
                                         <input id="MetadataManager.unregister_table-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="def">def</span>
         <span class="name">unregister_table</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">table_id</span></span><span class="return-annotation">):</span></span>
 
@@ -637,7 +637,7 @@
                             <div id="MetadataManager.knowledge_base_for_table" class="classattr">
                                         <input id="MetadataManager.knowledge_base_for_table-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="def">def</span>
         <span class="name">knowledge_base_for_table</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">table</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>, </span><span class="param"><span class="o">**</span><span class="n">kwargs</span></span><span class="return-annotation">):</span></span>
 
@@ -706,7 +706,7 @@ Pass <code>unregister_table_on_deletion = True</code> if you want to unregister 
                 <section id="KnowledgeBaseForTable">
                             <input id="KnowledgeBaseForTable-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
-            
+
     <span class="def">class</span>
     <span class="name">KnowledgeBaseForTable</span>:
 
@@ -779,7 +779,7 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
                             <div id="KnowledgeBaseForTable.__init__" class="classattr">
                                         <input id="KnowledgeBaseForTable.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="name">KnowledgeBaseForTable</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">mm</span><span class="p">:</span> <span class="n"><a href="#MetadataManager">MetadataManager</a></span>,</span><span class="param">	<span class="n">table_id</span><span class="p">:</span> <span class="nb">int</span>,</span><span class="param">	<span class="n">unregister_table_on_deletion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span>)</span>
 
                 <label class="view-source-button" for="KnowledgeBaseForTable.__init__-view-source"><span>View Source</span></label>
@@ -826,7 +826,7 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             </div>
                             <div id="KnowledgeBaseForTable.n_rows" class="classattr">
@@ -846,13 +846,13 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             </div>
                             <div id="KnowledgeBaseForTable.column_metadata" class="classattr">
                                         <input id="KnowledgeBaseForTable.column_metadata-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="def">def</span>
         <span class="name">column_metadata</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">col</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span></span><span class="return-annotation">):</span></span>
 
@@ -865,7 +865,7 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             </div>
                 </section>
@@ -894,40 +894,40 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             <div id="ColumnType.__init__" class="classattr">
                                 <div class="attr function">
-            
+
         <span class="name">ColumnType</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">physical</span><span class="p">:</span> <span class="n"><a href="type.html#PhysicalType">smlc.type.PhysicalType</a></span>,</span><span class="param">	<span class="n">logical</span><span class="p">:</span> <span class="n"><a href="type.html#LogicalType">smlc.type.LogicalType</a></span>,</span><span class="param">	<span class="n">semantic</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n"><a href="type.html#SemanticType">smlc.type.SemanticType</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">value_constraint</span><span class="p">:</span> <span class="n"><a href="type.html#ValueConstraint">smlc.type.ValueConstraint</a></span> <span class="o">=</span> <span class="o">&lt;</span><span class="n"><a href="type.html#AnyValue">smlc.type.AnyValue</a></span> <span class="nb">object</span><span class="o">&gt;</span></span>)</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnType.__init__"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnType.physical" class="classattr">
                                 <div class="attr variable">
             <span class="name">physical</span><span class="annotation">: <a href="type.html#PhysicalType">smlc.type.PhysicalType</a></span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnType.physical"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnType.logical" class="classattr">
                                 <div class="attr variable">
             <span class="name">logical</span><span class="annotation">: <a href="type.html#LogicalType">smlc.type.LogicalType</a></span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnType.logical"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnType.semantic" class="classattr">
@@ -935,11 +935,11 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
             <span class="name">semantic</span><span class="annotation">: Optional[<a href="type.html#SemanticType">smlc.type.SemanticType</a>]</span>        =
 <span class="default_value">None</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnType.semantic"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnType.value_constraint" class="classattr">
@@ -947,18 +947,18 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
             <span class="name">value_constraint</span><span class="annotation">: <a href="type.html#ValueConstraint">smlc.type.ValueConstraint</a></span>        =
 <span class="default_value">&lt;<a href="type.html#AnyValue">smlc.type.AnyValue</a> object&gt;</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnType.value_constraint"></a>
-    
-    
+
+
 
                             </div>
                 </section>
                 <section id="ColumnMetadata">
                             <input id="ColumnMetadata-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
-            
+
     <span class="def">class</span>
     <span class="name">ColumnMetadata</span>:
 
@@ -986,12 +986,12 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             <div id="ColumnMetadata.__init__" class="classattr">
                                         <input id="ColumnMetadata.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
-            
+
         <span class="name">ColumnMetadata</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">table_id</span><span class="p">:</span> <span class="nb">int</span>,</span><span class="param">	<span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">column_type</span><span class="p">:</span> <span class="n"><a href="#ColumnType">ColumnType</a></span>,</span><span class="param">	<span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&lt;missing&gt;&#39;</span>,</span><span class="param">	<span class="n">origin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&lt;unknown&gt;&#39;</span></span>)</span>
 
                 <label class="view-source-button" for="ColumnMetadata.__init__-view-source"><span>View Source</span></label>
@@ -1017,51 +1017,51 @@ If you want to recompute an attribute, delete (<code>del knowledge_base.attr</co
 </span></pre></div>
 
 
-    
+
 
                             </div>
                             <div id="ColumnMetadata.table_id" class="classattr">
                                 <div class="attr variable">
             <span class="name">table_id</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnMetadata.table_id"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnMetadata.column_name" class="classattr">
                                 <div class="attr variable">
             <span class="name">column_name</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnMetadata.column_name"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnMetadata.description" class="classattr">
                                 <div class="attr variable">
             <span class="name">description</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnMetadata.description"></a>
-    
-    
+
+
 
                             </div>
                             <div id="ColumnMetadata.origin" class="classattr">
                                 <div class="attr variable">
             <span class="name">origin</span>
 
-        
+
     </div>
     <a class="headerlink" href="#ColumnMetadata.origin"></a>
-    
-    
+
+
 
                             </div>
                 </section>

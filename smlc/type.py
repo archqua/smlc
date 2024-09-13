@@ -1,11 +1,11 @@
+"""
+Typing utilities that can help to define what a column type is.
+"""
+
 __docformat__ = "numpy"
 from abc import ABC, abstractmethod
 from enum import StrEnum, ReprEnum, auto
 from typing import Any, Type, Union
-
-"""
-Typing utilities that can help to define what a column type is.
-"""
 
 
 class PhysicalType(StrEnum):
@@ -267,6 +267,7 @@ class Xor(ValueConstraint):
     >>> r(3)
     False
     """
+
     def __init__(self, *args, allow_uneven=True):
         self._allow_uneven = allow_uneven
         if len(args) > 1:
@@ -283,7 +284,7 @@ class Xor(ValueConstraint):
             self._constraints = []
 
     def is_valid(self, value) -> bool:
-        """""" # (pdoc) removes inherited docstring
+        """"""  # (pdoc) removes inherited docstring
         res = 0
         for r in self._constraints:
             res += int(r(value))
@@ -645,7 +646,9 @@ class LengthLessThan(ValueConstraint):
 
     def is_valid(self, value) -> bool:
         """"""  # (pdoc) removes inherited docstring
-        return _Compose(LessThan(self._boundary, self._strict), _Length()).is_valid(value)
+        return _Compose(LessThan(self._boundary, self._strict), _Length()).is_valid(
+            value
+        )
 
 
 class LengthValidRange(ValueConstraint):
