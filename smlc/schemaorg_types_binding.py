@@ -1,6 +1,8 @@
 """This file was automatically generated at 2024-09-23 10:01:48+00:00.
 
-Documentation not function properly. Bindings for [schema.org types](
+Documentation may not function properly.
+
+Bindings for [schema.org types](
 https://schema.org/docs/full.html).
 """
 

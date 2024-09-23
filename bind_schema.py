@@ -61,7 +61,8 @@ if __name__ == "__main__":
     heading = (
         '"""\n'
         f"This file was automatically generated at {dttm.isoformat(sep=' ', timespec='seconds')}.\n"
-        "Documentation not function properly."
+        "\n"
+        "Documentation may not function properly.\n"
         "\n"
         "Bindings for [schema.org types](https://schema.org/docs/full.html).\n"
         '"""\n'
