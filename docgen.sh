@@ -2,7 +2,7 @@
 COMMIT_MSG=${1:-synchronizing docs}
 pdoc -t pdoc_template -o docs smlc &&
 git add -A &&
-pre-commit run --files docs &&
+pre-commit run --files docs/* &&
 git commit -m "$COMMIT_MSG"
 repeat_commit=$?
 if (( repeat_commit != 0 )); then
