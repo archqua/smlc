@@ -260,10 +260,9 @@ class KnowledgeBaseForTable:
 @dataclass(frozen=True)
 class ColumnType:
     physical: T.PhysicalType
-    logical: T.LogicalType
     # this might stop being optional
     # once implementation of SemanticType is established
-    semantic: Optional[T.SemanticType] = None
+    schema: T.Schema
     # Value constraints are supposed to be immutable.
     # For this reason we don't use dataclasses.field(default_factory=T.AnyValue).
     value_constraint: T.ValueConstraint = T.AnyValue()

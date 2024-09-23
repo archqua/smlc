@@ -1,9 +1,12 @@
 """Typing utilities that can help to define what a column type is."""
 
 __docformat__ = "numpy"
-from abc import ABC, abstractmethod
+from abc import ABC, ABCMeta, abstractmethod
 from enum import ReprEnum, StrEnum, auto
 from typing import Any, Type, Union
+
+from smlc.schemaorg_types_binding import Schema as _Schema
+from smlc.schemaorg_types_binding import sc as _sc
 
 
 class PhysicalType(StrEnum):
@@ -41,54 +44,107 @@ class PhysicalType(StrEnum):
     """ASCII-string."""
     utf8_str = auto()
     """UTF8-string."""
+    void = auto()
+    """Data structure (array, dict etc.).
 
-
-class LogicalType(StrEnum):
-    """Logical type.
-
-    Natural number, integer, real number, text, boolean, enum, time and timedelta.
-    """
-
-    boolean = auto()
-    """True or false (exclusive).
-
-    Allows negation, conjunction and disjunction.
-    """
-    enum = auto()
-    """Several possible values.
-
-    No arithmetic. No order.
-    """
-    natural = auto()
-    """Non-negative integers."""
-    integer = auto()
-    """Integers."""
-    real = auto()
-    """Real numbers."""
-    text = auto()
-    """Text/string that consists of individual characters.
-
-    Allows substring search, concatenation and manipulation with register.
-    """
-    time = auto()
-    """Time.
-
-    `time_1 - time_0 = timedelta`.
-    """
-    timedelta = auto()
-    """Timedelta.
-
-    `time_0 + timedelta = time_1`.
+    Name is inspired by `void*` in [C](https://www.iso.org/standard/74528.html).
     """
 
 
-# TODO
-class SemanticType(StrEnum):
-    pass
+class Schema(_Schema):
+    """
+    [schema.org type](https://schema.org/docs/full.html) binding.
+    See [schemaorg_types_binding](schemaorg_types_binding.html#Schema) for more info.
+
+    Direct usage is not recommended, see `sc` namespace.
+    """
 
 
-class ValueConstraint(ABC):
-    """Value constraint abstract base class."""
+class sc(_sc):
+    """Schema types namespace. See
+    [schemaorg_types_binding](schemaorg_types_binding.html#sc) for more info.
+
+    Usage: `sc.TypeName` for `'sc:TypeName'` from type annotation from json-ld file.
+
+    Examples
+    --------
+    >>> sc.Float
+    Float
+    >>> sc.parse('sc:Float')
+    Float
+    >>> sc._True
+    True
+    >>> sc.parse('sc:Floatt')
+    Traceback (most recent call last):
+        ...
+    AttributeError: ...
+    >>> sc.parse('cs:Float')
+    Traceback (most recent call last):
+        ...
+    AssertionError: Type annotation must start with 'sc:'
+    """
+
+
+# class LogicalType(StrEnum):
+#     """Logical type.
+
+#     Natural number, integer, real number, text, boolean, enum, time and timedelta.
+#     """
+
+#     boolean = auto()
+#     """True or false (exclusive).
+
+#     Allows negation, conjunction and disjunction.
+#     """
+#     enum = auto()
+#     """Several possible values.
+
+#     No arithmetic. No order.
+#     """
+#     natural = auto()
+#     """Non-negative integers."""
+#     integer = auto()
+#     """Integers."""
+#     real = auto()
+#     """Real numbers."""
+#     text = auto()
+#     """Text/string that consists of individual characters.
+
+#     Allows substring search, concatenation and manipulation with register.
+#     """
+#     time = auto()
+#     """Time.
+
+#     `time_1 - time_0 = timedelta`.
+#     """
+#     timedelta = auto()
+#     """Timedelta.
+
+#     `time_0 + timedelta = time_1`.
+#     """
+
+
+class _FrozenABCMeta(ABCMeta):
+    def __call__(cls, *args, **kwargs):
+        obj = type.__call__(cls, *args, **kwargs)
+        obj._freeze(*args, **kwargs)
+        return obj
+
+
+class _FrozenABC(metaclass=_FrozenABCMeta):
+    _frozen = False
+
+    def _freeze(self, *args, **kwargs):
+        self._frozen = True
+
+    def __setattr__(self, *args, **kwargs):
+        if self._frozen:
+            raise TypeError(f"{self} is a frozen class")
+        object.__setattr__(self, *args, **kwargs)
+
+
+class ValueConstraint(_FrozenABC):
+    """Value constraint immutable abstract base class."""
 
     def __init__(self, *args, **kwargs) -> None:
         pass
