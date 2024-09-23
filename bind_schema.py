@@ -2,6 +2,7 @@ import csv
 import datetime
 import os
 import pickle
+import re
 import subprocess
 from pathlib import Path
 
@@ -9,6 +10,9 @@ from schemaorg import logger as scl
 from schemaorg import main as scm
 from tqdm.auto import tqdm
 
+# idiomatically, these should be parameters
+project = "smlc"
+root = "smlc"
 csv_url = "https://raw.githubusercontent.com/openschemas/schemaorg/refs/heads/master/schemaorg/data/releases/12.0/schemaorg-all-http-types.csv"
 csv_path = "schemaorg-all-http-types.csv"
 # This is a relative path!!! Copy file for actual usage!!!
@@ -57,6 +61,9 @@ def read_csv(filename, mode="r", delim=",", header=None, keyfield=None):
 
 
 if __name__ == "__main__":
+    binding_storage = os.path.join(root, binding_storage)
+    binding_path = os.path.join(root, binding_path)
+    link_corrector = re.compile(r'(<a class="localLink" href=")(/)(\w+)(">\3</a>)')
     dttm = datetime.datetime.now(tz=datetime.timezone.utc)
     heading = (
         '"""\n'
@@ -119,15 +126,17 @@ if __name__ == "__main__":
             file=of,
         )
         for t in types:
+            comment = storage_dict[t].comment
+            comment, _ = link_corrector.subn(r"\1#sc.\3\4", comment)
             if t.isidentifier() and t != str(True) and t != str(False):
                 print(f'    {t} = schema_storage["{t}"]', file=of)
-                print(f'    """{storage_dict[t].comment}"""', file=of)
+                print(f'    """{comment}"""', file=of)
             else:
                 print(f"{t} is not a valid identifier T_T")
                 if ("_" + t).isidentifier():
                     print(f"    It was replaced with {'_' + t}")
                     print(f"    {'_' + t} = schema_storage[\"{t}\"]", file=of)
-                    print(f'    """@public {storage_dict[t].comment}"""', file=of)
+                    print(f'    """@public {comment}"""', file=of)
                 else:
                     print("    Can't fix, skipping...")
         print("del schema_storage", file=of)

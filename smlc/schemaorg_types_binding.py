@@ -1,4 +1,4 @@
-"""This file was automatically generated at 2024-09-23 10:01:48+00:00.
+"""This file was automatically generated at 2024-09-23 16:32:31+00:00.
 
 Documentation may not function properly.
 
@@ -15,10 +15,7 @@ import schemaorg.main
 
 Schema: Type = schemaorg.main.Schema
 
-# "smlc/" was prepended manually
-import os
-
-with open(os.path.join("smlc", "schemaorg_types_storage.pkl"), "rb") as sf:
+with open("smlc/schemaorg_types_storage.pkl", "rb") as sf:
     schema_storage = pickle.load(sf)
 
 
@@ -36,8 +33,8 @@ class sc:
         return getattr(sc, tkns[-1])
 
     _3DModel = schema_storage["3DModel"]
-    """@public A 3D model represents some kind of 3D content, which may have <a class="localLink" href="/encoding">encoding</a>s in one or more <a class="localLink" href="/MediaObject">MediaObject</a>s. Many 3D formats are available (e.g. see <a href="https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats">Wikipedia</a>); specific encoding formats can be represented using the <a class="localLink" href="/encodingFormat">encodingFormat</a> property applied to the relevant <a class="localLink" href="/MediaObject">MediaObject</a>. For the
-case of a single file published after Zip compression, the convention of appending '+zip' to the <a class="localLink" href="/encodingFormat">encodingFormat</a> can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using <a class="localLink" href="/3DModel">3DModel</a>."""
+    """@public A 3D model represents some kind of 3D content, which may have <a class="localLink" href="#sc.encoding">encoding</a>s in one or more <a class="localLink" href="#sc.MediaObject">MediaObject</a>s. Many 3D formats are available (e.g. see <a href="https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats">Wikipedia</a>); specific encoding formats can be represented using the <a class="localLink" href="#sc.encodingFormat">encodingFormat</a> property applied to the relevant <a class="localLink" href="#sc.MediaObject">MediaObject</a>. For the
+case of a single file published after Zip compression, the convention of appending '+zip' to the <a class="localLink" href="#sc.encodingFormat">encodingFormat</a> can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using <a class="localLink" href="#sc.3DModel">3DModel</a>."""
     AMRadioChannel = schema_storage["AMRadioChannel"]
     """A radio channel that uses AM."""
     APIReference = schema_storage["APIReference"]
@@ -51,8 +48,8 @@ case of a single file published after Zip compression, the convention of appendi
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/RejectAction">RejectAction</a>: The antonym of
-    AcceptAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.RejectAction">RejectAction</a>: The antonym
+    of AcceptAction.</li> </ul>
     """
     Accommodation = schema_storage["Accommodation"]
     """An accommodation is a place that can accommodate human beings, e.g. a hotel room,
@@ -67,9 +64,9 @@ case of a single file published after Zip compression, the convention of appendi
     AccountingService = schema_storage["AccountingService"]
     """Accountancy business.<br/><br/>
 
-    As a <a class="localLink" href="/LocalBusiness">LocalBusiness</a> it can be
-    described as a <a class="localLink" href="/provider">provider</a> of one or more <a
-    class="localLink" href="/Service">Service</a>(s).
+    As a <a class="localLink" href="#sc.LocalBusiness">LocalBusiness</a> it can be
+    described as a <a class="localLink" href="#sc.provider">provider</a> of one or more
+    <a class="localLink" href="#sc.Service">Service</a>(s).
     """
     AchieveAction = schema_storage["AchieveAction"]
     """The act of accomplishing something via previous efforts.
@@ -107,8 +104,8 @@ case of a single file published after Zip compression, the convention of appendi
     AdultEntertainment = schema_storage["AdultEntertainment"]
     """An adult entertainment establishment."""
     AdvertiserContentArticle = schema_storage["AdvertiserContentArticle"]
-    """An <a class="localLink" href="/Article">Article</a> that an external entity has
-    paid to place or to produce to its specifications.
+    """An <a class="localLink" href="#sc.Article">Article</a> that an external entity
+    has paid to place or to produce to its specifications.
 
     Includes <a href="https://en.wikipedia.org/wiki/Advertorial">advertorials</a>, sponsored content, native advertising and other paid content.
     """
@@ -121,7 +118,7 @@ case of a single file published after Zip compression, the convention of appendi
     pair of shoes is offered by different merchants), then AggregateOffer can be
     used.<br/><br/>
 
-    Note: AggregateOffers are normally expected to associate multiple offers that all share the same defined <a class="localLink" href="/businessFunction">businessFunction</a> value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.
+    Note: AggregateOffers are normally expected to associate multiple offers that all share the same defined <a class="localLink" href="#sc.businessFunction">businessFunction</a> value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.
     """
     AggregateRating = schema_storage["AggregateRating"]
     """The average rating based on multiple ratings or reviews."""
@@ -143,8 +140,8 @@ case of a single file published after Zip compression, the convention of appendi
 
     Should not be used where the nature of the alignment can be described using a simple
     property, for example to express that a resource <a class="localLink"
-    href="/teaches">teaches</a> or <a class="localLink" href="/assesses">assesses</a> a
-    competency.
+    href="#sc.teaches">teaches</a> or <a class="localLink"
+    href="#sc.assesses">assesses</a> a competency.
     """
     AllWheelDriveConfiguration = schema_storage["AllWheelDriveConfiguration"]
     """All-wheel Drive is a transmission layout where the engine drives all four
@@ -163,7 +160,7 @@ case of a single file published after Zip compression, the convention of appendi
     metabolism of the body."""
     AnalysisNewsArticle = schema_storage["AnalysisNewsArticle"]
     """An AnalysisNewsArticle is a <a class="localLink"
-    href="/NewsArticle">NewsArticle</a> that, while based on factual reporting,
+    href="#sc.NewsArticle">NewsArticle</a> that, while based on factual reporting,
     incorporates the expertise of the author/producer, offering interpretations and
     conclusions."""
     AnatomicalStructure = schema_storage["AnatomicalStructure"]
@@ -202,7 +199,7 @@ case of a single file published after Zip compression, the convention of appendi
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/RegisterAction">RegisterAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.RegisterAction">RegisterAction</a>: Unlike
     RegisterAction, ApplyAction has no guarantees that the application will be
     accepted.</li> </ul>
     """
@@ -242,15 +239,15 @@ case of a single file published after Zip compression, the convention of appendi
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ReplyAction">ReplyAction</a>: Appears generally
-    as a response to AskAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.ReplyAction">ReplyAction</a>: Appears
+    generally as a response to AskAction.</li> </ul>
     """
     AskPublicNewsArticle = schema_storage["AskPublicNewsArticle"]
-    """A <a class="localLink" href="/NewsArticle">NewsArticle</a> expressing an open
+    """A <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> expressing an open
     call by a <a class="localLink"
-    href="/NewsMediaOrganization">NewsMediaOrganization</a> asking the public for input,
-    insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting
-    purposes."""
+    href="#sc.NewsMediaOrganization">NewsMediaOrganization</a> asking the public for
+    input, insights, clarifications, anecdotes, documentation, etc., on an issue, for
+    reporting purposes."""
     AssessAction = schema_storage["AssessAction"]
     """The act of forming one's opinion, reaction or sentiment."""
     AssignAction = schema_storage["AssignAction"]
@@ -262,7 +259,7 @@ case of a single file published after Zip compression, the convention of appendi
     Attorney = schema_storage["Attorney"]
     """Professional service: Attorney. <br/><br/>
 
-This type is deprecated - <a class="localLink" href="/LegalService">LegalService</a> is more inclusive and less ambiguous."""
+This type is deprecated - <a class="localLink" href="#sc.LegalService">LegalService</a> is more inclusive and less ambiguous."""
     Audience = schema_storage["Audience"]
     """Intended audience for an item, i.e. the group for whom the item was created."""
     AudioObject = schema_storage["AudioObject"]
@@ -275,7 +272,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """Indicates that the publisher gives some special status to the publication of the
     document.
 
-    ("The Queens Printer" version of a UK Act of Parliament, or the PDF version of a Directive published by the EU Office of Publications). Something "Authoritative" is considered to be also <a class="localLink" href="/OfficialLegalValue">OfficialLegalValue</a>".
+    ("The Queens Printer" version of a UK Act of Parliament, or the PDF version of a Directive published by the EU Office of Publications). Something "Authoritative" is considered to be also <a class="localLink" href="#sc.OfficialLegalValue">OfficialLegalValue</a>".
     """
     AuthorizeAction = schema_storage["AuthorizeAction"]
     """The act of granting permission to an object."""
@@ -301,13 +298,13 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     BackOrder = schema_storage["BackOrder"]
     """Indicates that the item is available on back order."""
     BackgroundNewsArticle = schema_storage["BackgroundNewsArticle"]
-    """A <a class="localLink" href="/NewsArticle">NewsArticle</a> providing historical
-    context, definition and detail on a specific topic (aka "explainer" or
+    """A <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> providing
+    historical context, definition and detail on a specific topic (aka "explainer" or
     "backgrounder").
 
     For example, an in-depth article or frequently-asked-questions (<a href
     "https://en.wikipedia.org/wiki/FAQ">FAQ</a>)
-    document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using <a class="localLink" href="/Book">Book</a> or <a class="localLink" href="/Article">Article</a>, in particular <a class="localLink" href="/ScholarlyArticle">ScholarlyArticle</a>. See also <a class="localLink" href="/NewsArticle">NewsArticle</a> for related vocabulary from a learning/education perspective.
+    document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using <a class="localLink" href="#sc.Book">Book</a> or <a class="localLink" href="#sc.Article">Article</a>, in particular <a class="localLink" href="#sc.ScholarlyArticle">ScholarlyArticle</a>. See also <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> for related vocabulary from a learning/education perspective.
     """
     Bacteria = schema_storage["Bacteria"]
     """Pathogenic bacteria that cause bacterial infection."""
@@ -341,7 +338,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     quantity of twin beds for a hotel room.
 
     For the single case of just one bed of a certain type, you can use bed directly with
-    a text. See also <a class="localLink" href="/BedType">BedType</a> (under
+    a text. See also <a class="localLink" href="#sc.BedType">BedType</a> (under
     development).
     """
     BedType = schema_storage["BedType"]
@@ -355,7 +352,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/FollowAction">FollowAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.FollowAction">FollowAction</a>: Unlike
     FollowAction, BefriendAction implies that the connection is reciprocal.</li> </ul>
     """
     BenefitsHealthAspect = schema_storage["BenefitsHealthAspect"]
@@ -373,7 +370,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     BoatReservation = schema_storage["BoatReservation"]
     """A reservation for boat travel.<br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     BoatTerminal = schema_storage["BoatTerminal"]
     """A terminal for boats, ships, and other water vessels."""
@@ -476,7 +473,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/LendAction">LendAction</a>: Reciprocal of
+    <ul> <li><a class="localLink" href="#sc.LendAction">LendAction</a>: Reciprocal of
     BorrowAction.</li> </ul>
     """
     BowlingAlley = schema_storage["BowlingAlley"]
@@ -492,7 +489,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     typically described using at least their URL and their name, and typically ending
     with the current page.<br/><br/>
 
-    The <a class="localLink" href="/position">position</a> property is used to reconstruct the order of the items in a BreadcrumbList The convention is that a breadcrumb list has an <a class="localLink" href="/itemListOrder">itemListOrder</a> of <a class="localLink" href="/ItemListOrderAscending">ItemListOrderAscending</a> (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.
+    The <a class="localLink" href="#sc.position">position</a> property is used to reconstruct the order of the items in a BreadcrumbList The convention is that a breadcrumb list has an <a class="localLink" href="#sc.itemListOrder">itemListOrder</a> of <a class="localLink" href="#sc.ItemListOrderAscending">ItemListOrderAscending</a> (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.
     """
     Brewery = schema_storage["Brewery"]
     """Brewery."""
@@ -523,7 +520,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     BusReservation = schema_storage["BusReservation"]
     """A reservation for bus travel. <br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     BusStation = schema_storage["BusStation"]
     """A bus station."""
@@ -598,18 +595,18 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """A cafe or coffee shop."""
     Campground = schema_storage["Campground"]
     """A camping site, campsite, or <a class="localLink"
-    href="/Campground">Campground</a> is a place used for overnight stay in the
+    href="#sc.Campground">Campground</a> is a place used for overnight stay in the
     outdoors, typically containing individual <a class="localLink"
-    href="/CampingPitch">CampingPitch</a> locations. <br/><br/>
+    href="#sc.CampingPitch">CampingPitch</a> locations. <br/><br/>
 
     In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (Source: Wikipedia see <a href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).<br/><br/>
 
     See also the dedicated <a href="/docs/hotels.html">document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
     """
     CampingPitch = schema_storage["CampingPitch"]
-    """A <a class="localLink" href="/CampingPitch">CampingPitch</a> is an individual
+    """A <a class="localLink" href="#sc.CampingPitch">CampingPitch</a> is an individual
     place for overnight stay in the outdoors, typically being part of a larger camping
-    site, or <a class="localLink" href="/Campground">Campground</a>.<br/><br/>
+    site, or <a class="localLink" href="#sc.Campground">Campground</a>.<br/><br/>
 
     In British English a campsite, or campground, is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites.
     (Source: Wikipedia see <a href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).<br/><br/>
@@ -624,8 +621,8 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ConfirmAction">ConfirmAction</a>: The antonym
-    of CancelAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.ConfirmAction">ConfirmAction</a>: The
+    antonym of CancelAction.</li> </ul>
     """
     Car = schema_storage["Car"]
     """A car is a wheeled, self-powered motor vehicle used for transportation."""
@@ -682,11 +679,11 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/CheckOutAction">CheckOutAction</a>: The antonym
-    of CheckInAction.</li> <li><a class="localLink"
-    href="/ArriveAction">ArriveAction</a>: Unlike ArriveAction, CheckInAction implies
+    <ul> <li><a class="localLink" href="#sc.CheckOutAction">CheckOutAction</a>: The
+    antonym of CheckInAction.</li> <li><a class="localLink"
+    href="#sc.ArriveAction">ArriveAction</a>: Unlike ArriveAction, CheckInAction implies
     that the agent is informing/confirming the start of a previously reserved
-    service.</li> <li><a class="localLink" href="/ConfirmAction">ConfirmAction</a>:
+    service.</li> <li><a class="localLink" href="#sc.ConfirmAction">ConfirmAction</a>:
     Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming
     the <em>start</em> of a previously reserved service rather than its
     validity/existence.</li> </ul>
@@ -698,13 +695,13 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/CheckInAction">CheckInAction</a>: The antonym
-    of CheckOutAction.</li> <li><a class="localLink"
-    href="/DepartAction">DepartAction</a>: Unlike DepartAction, CheckOutAction implies
-    that the agent is informing/confirming the end of a previously reserved
-    service.</li> <li><a class="localLink" href="/CancelAction">CancelAction</a>: Unlike
-    CancelAction, CheckOutAction implies that the agent is informing/confirming the end
-    of a previously reserved service.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.CheckInAction">CheckInAction</a>: The
+    antonym of CheckOutAction.</li> <li><a class="localLink"
+    href="#sc.DepartAction">DepartAction</a>: Unlike DepartAction, CheckOutAction
+    implies that the agent is informing/confirming the end of a previously reserved
+    service.</li> <li><a class="localLink" href="#sc.CancelAction">CancelAction</a>:
+    Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming
+    the end of a previously reserved service.</li> </ul>
     """
     CheckoutPage = schema_storage["CheckoutPage"]
     """Web page type: Checkout page."""
@@ -727,19 +724,19 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     CivicStructure = schema_storage["CivicStructure"]
     """A public structure, such as a town hall or concert hall."""
     Claim = schema_storage["Claim"]
-    """A <a class="localLink" href="/Claim">Claim</a> in Schema.org represents a
+    """A <a class="localLink" href="#sc.Claim">Claim</a> in Schema.org represents a
     specific, factually-oriented claim that could be the <a class="localLink"
-    href="/itemReviewed">itemReviewed</a> in a <a class="localLink"
-    href="/ClaimReview">ClaimReview</a>. The content of a claim can be summarized with
-    the <a class="localLink" href="/text">text</a> property. Variations on well known
-    claims can have their common identity indicated via <a class="localLink"
-    href="/sameAs">sameAs</a> links, and summarized with a <a class="localLink"
-    href="/name">name</a>. Ideally, a <a class="localLink" href="/Claim">Claim</a>
+    href="#sc.itemReviewed">itemReviewed</a> in a <a class="localLink"
+    href="#sc.ClaimReview">ClaimReview</a>. The content of a claim can be summarized
+    with the <a class="localLink" href="#sc.text">text</a> property. Variations on well
+    known claims can have their common identity indicated via <a class="localLink"
+    href="#sc.sameAs">sameAs</a> links, and summarized with a <a class="localLink"
+    href="#sc.name">name</a>. Ideally, a <a class="localLink" href="#sc.Claim">Claim</a>
     description includes enough contextual information to minimize the risk of ambiguity
     or inclarity. In practice, many claims are better understood in the context in which
     they appear or the interpretations provided by claim reviews.<br/><br/>
 
-    Beyond <a class="localLink" href="/ClaimReview">ClaimReview</a>, the Claim type can be associated with related creative works - for example a <a class="localLink" href="/ScholarlyArticle">ScholarlyArticle</a> or <a class="localLink" href="/Question">Question</a> might be <a class="localLink" href="/about">about</a> some <a class="localLink" href="/Claim">Claim</a>.<br/><br/>
+    Beyond <a class="localLink" href="#sc.ClaimReview">ClaimReview</a>, the Claim type can be associated with related creative works - for example a <a class="localLink" href="#sc.ScholarlyArticle">ScholarlyArticle</a> or <a class="localLink" href="#sc.Question">Question</a> might be <a class="localLink" href="#sc.about">about</a> some <a class="localLink" href="#sc.Claim">Claim</a>.<br/><br/>
 
     At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.
     """
@@ -809,7 +806,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     comics have at least two stories: a cover (ComicCoverArt) and an interior story.
     """
     Comment = schema_storage["Comment"]
-    """A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the <a class="localLink" href="/text">text</a> property, and its topic via <a class="localLink" href="/about">about</a>, properties shared with all CreativeWorks."""
+    """A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the <a class="localLink" href="#sc.text">text</a> property, and its topic via <a class="localLink" href="#sc.about">about</a>, properties shared with all CreativeWorks."""
     CommentAction = schema_storage["CommentAction"]
     """The act of generating a comment about a subject."""
     CommentPermission = schema_storage["CommentPermission"]
@@ -823,8 +820,8 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     CompilationAlbum = schema_storage["CompilationAlbum"]
     """CompilationAlbum."""
     CompleteDataFeed = schema_storage["CompleteDataFeed"]
-    """A <a class="localLink" href="/CompleteDataFeed">CompleteDataFeed</a> is a <a
-    class="localLink" href="/DataFeed">DataFeed</a> whose standard representation
+    """A <a class="localLink" href="#sc.CompleteDataFeed">CompleteDataFeed</a> is a <a
+    class="localLink" href="#sc.DataFeed">DataFeed</a> whose standard representation
     includes content for every item currently in the feed.<br/><br/>
 
     This is the equivalent of Atom's element as defined in Feed Paging and Archiving <a
@@ -848,7 +845,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     as other language-like computer representations.
 
     Natural languages are best represented with the <a class="localLink"
-    href="/Language">Language</a> type.
+    href="#sc.Language">Language</a> type.
     """
     ComputerStore = schema_storage["ComputerStore"]
     """A computer store."""
@@ -858,12 +855,13 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/CancelAction">CancelAction</a>: The antonym of
-    ConfirmAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.CancelAction">CancelAction</a>: The antonym
+    of ConfirmAction.</li> </ul>
     """
     Consortium = schema_storage["Consortium"]
     """A Consortium is a membership <a class="localLink"
-    href="/Organization">Organization</a> whose members are typically Organizations."""
+    href="#sc.Organization">Organization</a> whose members are typically
+    Organizations."""
     ConsumeAction = schema_storage["ConsumeAction"]
     """The act of ingesting information/resources/food."""
     ContactPage = schema_storage["ContactPage"]
@@ -892,8 +890,8 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     Corporation = schema_storage["Corporation"]
     """Organization: A business corporation."""
     CorrectionComment = schema_storage["CorrectionComment"]
-    """A <a class="localLink" href="/comment">comment</a> that corrects <a
-    class="localLink" href="/CreativeWork">CreativeWork</a>."""
+    """A <a class="localLink" href="#sc.comment">comment</a> that corrects <a
+    class="localLink" href="#sc.CreativeWork">CreativeWork</a>."""
     Country = schema_storage["Country"]
     """A country."""
     Course = schema_storage["Course"]
@@ -905,22 +903,23 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     creative works which aims to build knowledge, competence or ability of learners.
     """
     CourseInstance = schema_storage["CourseInstance"]
-    """An instance of a <a class="localLink" href="/Course">Course</a> which is distinct
-    from other instances because it is offered at a different time or location or
-    through different media or modes of study or to a specific section of students."""
+    """An instance of a <a class="localLink" href="#sc.Course">Course</a> which is
+    distinct from other instances because it is offered at a different time or location
+    or through different media or modes of study or to a specific section of
+    students."""
     Courthouse = schema_storage["Courthouse"]
     """A courthouse."""
     CoverArt = schema_storage["CoverArt"]
     """The artwork on the outer surface of a CreativeWork."""
     CovidTestingFacility = schema_storage["CovidTestingFacility"]
     """A CovidTestingFacility is a <a class="localLink"
-    href="/MedicalClinic">MedicalClinic</a> where testing for the COVID-19 Coronavirus
-    disease is available.
+    href="#sc.MedicalClinic">MedicalClinic</a> where testing for the COVID-19
+    Coronavirus disease is available.
 
     If the facility is being made available from an established <a class="localLink"
-    href="/Pharmacy">Pharmacy</a>, <a class="localLink" href="/Hotel">Hotel</a>, or
-    other non-medical organization, multiple types can be listed. This makes it easier
-    to re-use existing schema.org information about that place e.g. contact info,
+    href="#sc.Pharmacy">Pharmacy</a>, <a class="localLink" href="#sc.Hotel">Hotel</a>,
+    or other non-medical organization, multiple types can be listed. This makes it
+    easier to re-use existing schema.org information about that place e.g. contact info,
     address, opening hours. Note that in an emergency, such information may not always
     be reliable.
     """
@@ -936,21 +935,21 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """A CreativeWorkSeries in schema.org is a group of related items, typically but not
     necessarily of the same kind. CreativeWorkSeries are usually organized into some
     order, often chronological. Unlike <a class="localLink"
-    href="/ItemList">ItemList</a> which is a general purpose data structure for lists of
-    things, the emphasis with CreativeWorkSeries is on published materials (written e.g.
-    books and periodicals, or media such as tv, radio and games).<br/><br/>
+    href="#sc.ItemList">ItemList</a> which is a general purpose data structure for lists
+    of things, the emphasis with CreativeWorkSeries is on published materials (written
+    e.g. books and periodicals, or media such as tv, radio and games).<br/><br/>
 
     Specific subtypes are available for describing <a class="localLink"
-    href="/TVSeries">TVSeries</a>, <a class="localLink"
-    href="/RadioSeries">RadioSeries</a>, <a class="localLink"
-    href="/MovieSeries">MovieSeries</a>, <a class="localLink"
-    href="/BookSeries">BookSeries</a>, <a class="localLink"
-    href="/Periodical">Periodical</a> and <a class="localLink"
-    href="/VideoGameSeries">VideoGameSeries</a>. In each case, the <a class="localLink"
-    href="/hasPart">hasPart</a> / <a class="localLink" href="/isPartOf">isPartOf</a>
-    properties can be used to relate the CreativeWorkSeries to its parts. The general
-    CreativeWorkSeries type serves largely just to organize these more specific and
-    practical subtypes.<br/><br/>
+    href="#sc.TVSeries">TVSeries</a>, <a class="localLink"
+    href="#sc.RadioSeries">RadioSeries</a>, <a class="localLink"
+    href="#sc.MovieSeries">MovieSeries</a>, <a class="localLink"
+    href="#sc.BookSeries">BookSeries</a>, <a class="localLink"
+    href="#sc.Periodical">Periodical</a> and <a class="localLink"
+    href="#sc.VideoGameSeries">VideoGameSeries</a>. In each case, the <a
+    class="localLink" href="#sc.hasPart">hasPart</a> / <a class="localLink"
+    href="#sc.isPartOf">isPartOf</a> properties can be used to relate the
+    CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely
+    just to organize these more specific and practical subtypes.<br/><br/>
 
     It is common for properties applicable to an item from the series to be usefully
     applied to the containing group. Schema.org attempts to anticipate some of these
@@ -976,18 +975,18 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     Crematorium = schema_storage["Crematorium"]
     """A crematorium."""
     CriticReview = schema_storage["CriticReview"]
-    """A <a class="localLink" href="/CriticReview">CriticReview</a> is a more
+    """A <a class="localLink" href="#sc.CriticReview">CriticReview</a> is a more
     specialized form of Review written or published by a source that is recognized for
     its reviewing activities.
 
     These can include online columns, travel and food guides, TV and radio shows, blogs
     and other independent Web sites. <a class="localLink"
-    href="/CriticReview">CriticReview</a>s are typically more in-depth and
+    href="#sc.CriticReview">CriticReview</a>s are typically more in-depth and
     professionally written. For simpler, casually written user/visitor/viewer/customer
     reviews, it is more appropriate to use the <a class="localLink"
-    href="/UserReview">UserReview</a> type. Review aggregator sites such as Metacritic
-    already separate out the site's user reviews from selected critic reviews that
-    originate from third-party sources.
+    href="#sc.UserReview">UserReview</a> type. Review aggregator sites such as
+    Metacritic already separate out the site's user reviews from selected critic reviews
+    that originate from third-party sources.
     """
     CrossSectional = schema_storage["CrossSectional"]
     """Studies carried out on pre-existing data (usually from 'snapshot' surveys), such
@@ -1037,13 +1036,13 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     For example, this could represent an employee's salary over a specific period of
     time. <strong>Note:</strong> This type has been superseded by <a class="localLink"
-    href="/MonetaryAmount">MonetaryAmount</a> use of that type is recommended
+    href="#sc.MonetaryAmount">MonetaryAmount</a> use of that type is recommended
     """
     DayOfWeek = schema_storage["DayOfWeek"]
     """The day of the week, e.g. used to specify to which day the opening hours of an
     OpeningHoursSpecification refer.<br/><br/>
 
-    Originally, URLs from <a href="http://purl.org/goodrelations/v1">GoodRelations</a> were used (for <a class="localLink" href="/Monday">Monday</a>, <a class="localLink" href="/Tuesday">Tuesday</a>, <a class="localLink" href="/Wednesday">Wednesday</a>, <a class="localLink" href="/Thursday">Thursday</a>, <a class="localLink" href="/Friday">Friday</a>, <a class="localLink" href="/Saturday">Saturday</a>, <a class="localLink" href="/Sunday">Sunday</a> plus a special entry for <a class="localLink" href="/PublicHolidays">PublicHolidays</a>); these have now been integrated directly into schema.org.
+    Originally, URLs from <a href="http://purl.org/goodrelations/v1">GoodRelations</a> were used (for <a class="localLink" href="#sc.Monday">Monday</a>, <a class="localLink" href="#sc.Tuesday">Tuesday</a>, <a class="localLink" href="#sc.Wednesday">Wednesday</a>, <a class="localLink" href="#sc.Thursday">Thursday</a>, <a class="localLink" href="#sc.Friday">Friday</a>, <a class="localLink" href="#sc.Saturday">Saturday</a>, <a class="localLink" href="#sc.Sunday">Sunday</a> plus a special entry for <a class="localLink" href="#sc.PublicHolidays">PublicHolidays</a>); these have now been integrated directly into schema.org.
     """
     DaySpa = schema_storage["DaySpa"]
     """A day spa."""
@@ -1052,28 +1051,29 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     timer or turning off a flashlight)."""
     DecontextualizedContent = schema_storage["DecontextualizedContent"]
     """Content coded 'missing context' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'missing
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'missing
     context': Presenting unaltered video in an inaccurate manner that misrepresents the
     footage. For example, using incorrect dates or locations, altering the transcript or
     sharing brief clips from a longer video to mislead viewers. (A video rated
     'original' can also be missing context.)<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'missing
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be 'missing
     context': Presenting unaltered images in an inaccurate manner to misrepresent the
     image and mislead the viewer. For example, a common tactic is using an unaltered
     image but saying it came from a different time or place. (An image rated 'original'
     can also be missing context.)<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'missing context': An unaltered image presented in an inaccurate manner to
-    misrepresent the image and mislead the viewer. For example, a common tactic is using
-    an unaltered image but saying it came from a different time or place. (An 'original'
-    image with inaccurate text would generally fall in this category.)<br/><br/>
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'missing context': An unaltered image presented in an inaccurate manner
+    to misrepresent the image and mislead the viewer. For example, a common tactic is
+    using an unaltered image but saying it came from a different time or place. (An
+    'original' image with inaccurate text would generally fall in this
+    category.)<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'missing
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be 'missing
     context': Unaltered audio presented in an inaccurate manner that misrepresents it.
     For example, using incorrect dates or locations, or sharing brief clips from a
     longer recording to mislead viewers. (Audio rated “original” can also be missing
@@ -1114,7 +1114,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     legally binding.
 
     (e.g. The digitally signed version of an Official Journal.)
-    Something "Definitive" is considered to be also <a class="localLink" href="/AuthoritativeLegalValue">AuthoritativeLegalValue</a>.
+    Something "Definitive" is considered to be also <a class="localLink" href="#sc.AuthoritativeLegalValue">AuthoritativeLegalValue</a>.
     """
     DeleteAction = schema_storage["DeleteAction"]
     """The act of editing a recipient by removing one of its objects."""
@@ -1146,7 +1146,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """A DeliveryTimeSettings represents re-usable pieces of shipping information,
     relating to timing.
 
-    It is designed for publication on an URL that may be referenced via the <a class="localLink" href="/shippingSettingsLink">shippingSettingsLink</a> property of a <a class="localLink" href="/OfferShippingDetails">OfferShippingDetails</a>. Several occurrences can be published, distinguished (and identified/referenced) by their different values for <a class="localLink" href="/transitTimeLabel">transitTimeLabel</a>.
+    It is designed for publication on an URL that may be referenced via the <a class="localLink" href="#sc.shippingSettingsLink">shippingSettingsLink</a> property of a <a class="localLink" href="#sc.OfferShippingDetails">OfferShippingDetails</a>. Several occurrences can be published, distinguished (and identified/referenced) by their different values for <a class="localLink" href="#sc.transitTimeLabel">transitTimeLabel</a>.
     """
     Demand = schema_storage["Demand"]
     """A demand entity represents the public, not necessarily binding, not necessarily
@@ -1351,23 +1351,23 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """The act of swallowing solid objects."""
     EditedOrCroppedContent = schema_storage["EditedOrCroppedContent"]
     """Content coded 'edited or cropped content' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'edited or
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'edited or
     cropped content': The video has been edited or rearranged. This category applies to
     time edits, including editing multiple videos together to alter the story being told
     or editing out large portions from a video.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'edited or
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be 'edited or
     cropped content': Presenting a part of an image from a larger whole to mislead the
     viewer.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'edited or cropped content': Presenting a part of an image from a larger whole
-    to mislead the viewer.<br/><br/>
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'edited or cropped content': Presenting a part of an image from a larger
+    whole to mislead the viewer.<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'edited or
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be 'edited or
     cropped content': The audio has been edited or rearranged. This category applies to
     time edits, including editing multiple audio clips together to alter the story being
     told or editing out large portions from the recording.
@@ -1418,9 +1418,10 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     EmployerAggregateRating = schema_storage["EmployerAggregateRating"]
     """An aggregate rating of an Organization related to its role as an employer."""
     EmployerReview = schema_storage["EmployerReview"]
-    """An <a class="localLink" href="/EmployerReview">EmployerReview</a> is a review of
-    an <a class="localLink" href="/Organization">Organization</a> regarding its role as
-    an employer, written by a current or former employee of that organization."""
+    """An <a class="localLink" href="#sc.EmployerReview">EmployerReview</a> is a review
+    of an <a class="localLink" href="#sc.Organization">Organization</a> regarding its
+    role as an employer, written by a current or former employee of that
+    organization."""
     EmploymentAgency = schema_storage["EmploymentAgency"]
     """An employment agency."""
     Endocrine = schema_storage["Endocrine"]
@@ -1431,18 +1432,18 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     EndorsementRating = schema_storage["EndorsementRating"]
     """An EndorsementRating is a rating that expresses some level of endorsement, for
     example inclusion in a "critic's pick" blog, a "Like" or "+1" on a social network.
-    It can be considered the <a class="localLink" href="/result">result</a> of an <a
-    class="localLink" href="/EndorseAction">EndorseAction</a> in which the <a
-    class="localLink" href="/object">object</a> of the action is rated positively by
-    some <a class="localLink" href="/agent">agent</a>. As is common elsewhere in
+    It can be considered the <a class="localLink" href="#sc.result">result</a> of an <a
+    class="localLink" href="#sc.EndorseAction">EndorseAction</a> in which the <a
+    class="localLink" href="#sc.object">object</a> of the action is rated positively by
+    some <a class="localLink" href="#sc.agent">agent</a>. As is common elsewhere in
     schema.org, it is sometimes more useful to describe the results of such an action
     without explicitly describing the <a class="localLink"
-    href="/Action">Action</a>.<br/><br/>
+    href="#sc.Action">Action</a>.<br/><br/>
 
-    An <a class="localLink" href="/EndorsementRating">EndorsementRating</a> may be part
-    of a numeric scale or organized system, but this is not required: having an explicit
-    type for indicating a positive, endorsement rating is particularly useful in the
-    absence of numeric scales as it helps consumers understand that the rating is
+    An <a class="localLink" href="#sc.EndorsementRating">EndorsementRating</a> may be
+    part of a numeric scale or organized system, but this is not required: having an
+    explicit type for indicating a positive, endorsement rating is particularly useful
+    in the absence of numeric scales as it helps consumers understand that the rating is
     broadly positive.
     """
     Energy = schema_storage["Energy"]
@@ -1486,7 +1487,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     festival.
 
     Ticketing information may be added via the <a class="localLink"
-    href="/offers">offers</a> property. Repeated events may be structured as separate
+    href="#sc.offers">offers</a> property. Repeated events may be structured as separate
     Event objects.
     """
     EventAttendanceModeEnumeration = schema_storage["EventAttendanceModeEnumeration"]
@@ -1501,7 +1502,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     EventMovedOnline = schema_storage["EventMovedOnline"]
     """Indicates that the event was changed to allow online participation.
 
-    See <a class="localLink" href="/eventAttendanceMode">eventAttendanceMode</a> for specifics of whether it is now fully or partially online.
+    See <a class="localLink" href="#sc.eventAttendanceMode">eventAttendanceMode</a> for specifics of whether it is now fully or partially online.
     """
     EventPostponed = schema_storage["EventPostponed"]
     """The event has been postponed and no new date has been set.
@@ -1518,7 +1519,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     EventReservation = schema_storage["EventReservation"]
     """A reservation for an event like a concert, sporting event, or lecture.<br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     EventScheduled = schema_storage["EventScheduled"]
     """The event is taking place or has taken place on the startDate as scheduled.
@@ -1526,20 +1527,20 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     Use of this value is optional, as it is assumed by default.
     """
     EventSeries = schema_storage["EventSeries"]
-    """A series of <a class="localLink" href="/Event">Event</a>s. Included events can
+    """A series of <a class="localLink" href="#sc.Event">Event</a>s. Included events can
     relate with the series using the <a class="localLink"
-    href="/superEvent">superEvent</a> property.<br/><br/>
+    href="#sc.superEvent">superEvent</a> property.<br/><br/>
 
     An EventSeries is a collection of events that share some unifying characteristic.
     For example, "The Olympic Games" is a series, which is repeated regularly. The "2012
     London Olympics" can be presented both as an <a class="localLink"
-    href="/Event">Event</a> in the series "Olympic Games", and as an <a
-    class="localLink" href="/EventSeries">EventSeries</a> that included a number of
+    href="#sc.Event">Event</a> in the series "Olympic Games", and as an <a
+    class="localLink" href="#sc.EventSeries">EventSeries</a> that included a number of
     sporting competitions as Events.<br/><br/>
 
     The nature of the association between the events in an <a class="localLink"
-    href="/EventSeries">EventSeries</a> can vary, but typical examples could include a
-    thematic event series (e.g. topical meetups or classes), or a series of regular
+    href="#sc.EventSeries">EventSeries</a> can vary, but typical examples could include
+    a thematic event series (e.g. topical meetups or classes), or a series of regular
     events that share a location, attendee group and/or organizers.<br/><br/>
 
     EventSeries has been defined as a kind of Event to make it easy for publishers to
@@ -1577,7 +1578,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     Eye = schema_storage["Eye"]
     """Eye or ophtalmological function assessment with clinical examination."""
     FAQPage = schema_storage["FAQPage"]
-    """A <a class="localLink" href="/FAQPage">FAQPage</a> is a <a class="localLink" href="/WebPage">WebPage</a> presenting one or more "<a href="https://en.wikipedia.org/wiki/FAQ">Frequently asked questions</a>" (see also <a class="localLink" href="/QAPage">QAPage</a>)."""
+    """A <a class="localLink" href="#sc.FAQPage">FAQPage</a> is a <a class="localLink" href="#sc.WebPage">WebPage</a> presenting one or more "<a href="https://en.wikipedia.org/wiki/FAQ">Frequently asked questions</a>" (see also <a class="localLink" href="#sc.QAPage">QAPage</a>)."""
     FDAcategoryA = schema_storage["FDAcategoryA"]
     """A designation by the US FDA signifying that adequate and well-controlled studies
     have failed to demonstrate a risk to the fetus in the first trimester of pregnancy
@@ -1634,8 +1635,8 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/SearchAction">SearchAction</a>: FindAction is
-    generally lead by a SearchAction, but not necessarily.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.SearchAction">SearchAction</a>: FindAction
+    is generally lead by a SearchAction, but not necessarily.</li> </ul>
     """
     FireStation = schema_storage["FireStation"]
     """A fire station.
@@ -1649,7 +1650,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     FlightReservation = schema_storage["FlightReservation"]
     """A reservation for air travel.<br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     Float = schema_storage["Float"]
     """Data type: Floating number."""
@@ -1658,7 +1659,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     accommodations, allowing the provision of common information (room counts, sizes,
     layout diagrams) and offers for rental or sale.
 
-    In typical use, some <a class="localLink" href="/ApartmentComplex">ApartmentComplex</a> has an <a class="localLink" href="/accommodationFloorPlan">accommodationFloorPlan</a> which is a <a class="localLink" href="/FloorPlan">FloorPlan</a>.  A FloorPlan is always in the context of a particular place, either a larger <a class="localLink" href="/ApartmentComplex">ApartmentComplex</a> or a single <a class="localLink" href="/Apartment">Apartment</a>. The visual/spatial aspects of a floor plan (i.e. room layout, <a href="https://en.wikipedia.org/wiki/Floor_plan">see wikipedia</a>) can be indicated using <a class="localLink" href="/image">image</a>.
+    In typical use, some <a class="localLink" href="#sc.ApartmentComplex">ApartmentComplex</a> has an <a class="localLink" href="#sc.accommodationFloorPlan">accommodationFloorPlan</a> which is a <a class="localLink" href="#sc.FloorPlan">FloorPlan</a>.  A FloorPlan is always in the context of a particular place, either a larger <a class="localLink" href="#sc.ApartmentComplex">ApartmentComplex</a> or a single <a class="localLink" href="#sc.Apartment">Apartment</a>. The visual/spatial aspects of a floor plan (i.e. room layout, <a href="https://en.wikipedia.org/wiki/Floor_plan">see wikipedia</a>) can be indicated using <a class="localLink" href="#sc.image">image</a>.
     """
     Florist = schema_storage["Florist"]
     """A florist."""
@@ -1668,17 +1669,17 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/BefriendAction">BefriendAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.BefriendAction">BefriendAction</a>: Unlike
     BefriendAction, FollowAction implies that the connection is <em>not</em> necessarily
     reciprocal.</li> <li><a class="localLink"
-    href="/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, FollowAction
+    href="#sc.SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, FollowAction
     implies that the follower acts as an active agent constantly/actively polling for
-    updates.</li> <li><a class="localLink" href="/RegisterAction">RegisterAction</a>:
+    updates.</li> <li><a class="localLink" href="#sc.RegisterAction">RegisterAction</a>:
     Unlike RegisterAction, FollowAction implies that the agent is interested in
     continuing receiving updates from the object.</li> <li><a class="localLink"
-    href="/JoinAction">JoinAction</a>: Unlike JoinAction, FollowAction implies that the
-    agent is interested in getting updates from the object.</li> <li><a
-    class="localLink" href="/TrackAction">TrackAction</a>: Unlike TrackAction,
+    href="#sc.JoinAction">JoinAction</a>: Unlike JoinAction, FollowAction implies that
+    the agent is interested in getting updates from the object.</li> <li><a
+    class="localLink" href="#sc.TrackAction">TrackAction</a>: Unlike TrackAction,
     FollowAction refers to the polling of updates of all aspects of animate objects
     rather than the location of inanimate objects (e.g. you track a package, but you
     don't follow it).</li> </ul>
@@ -1706,11 +1707,11 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """A FullRefund ..."""
     FundingAgency = schema_storage["FundingAgency"]
     """A FundingAgency is an organization that implements one or more <a
-    class="localLink" href="/FundingScheme">FundingScheme</a>s and manages the granting
-    process (via <a class="localLink" href="/Grant">Grant</a>s, typically <a
-    class="localLink" href="/MonetaryGrant">MonetaryGrant</a>s). A funding agency is not
-    always required for grant funding, e.g. philanthropic giving, corporate sponsorship
-    etc.<br/><br/>
+    class="localLink" href="#sc.FundingScheme">FundingScheme</a>s and manages the
+    granting process (via <a class="localLink" href="#sc.Grant">Grant</a>s, typically <a
+    class="localLink" href="#sc.MonetaryGrant">MonetaryGrant</a>s). A funding agency is
+    not always required for grant funding, e.g. philanthropic giving, corporate
+    sponsorship etc.<br/><br/>
 
     Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation...
     """
@@ -1719,7 +1720,7 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     based funding.
 
     that sets guidelines, principles and mechanisms to support other kinds of projects and activities.
-    Funding is typically organized via <a class="localLink" href="/Grant">Grant</a> funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - <a class="localLink" href="/FundingAgency">FundingAgency</a>s such as ERC, REA, ...
+    Funding is typically organized via <a class="localLink" href="#sc.Grant">Grant</a> funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - <a class="localLink" href="#sc.FundingAgency">FundingAgency</a>s such as ERC, REA, ...
     """
     Fungus = schema_storage["Fungus"]
     """Pathogenic fungus."""
@@ -1788,10 +1789,10 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/TakeAction">TakeAction</a>: Reciprocal of
-    GiveAction.</li> <li><a class="localLink" href="/SendAction">SendAction</a>: Unlike
-    SendAction, GiveAction implies that ownership is being transferred (e.g. I may send
-    my laptop to you, but that doesn't mean I'm giving it to you).</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.TakeAction">TakeAction</a>: Reciprocal of
+    GiveAction.</li> <li><a class="localLink" href="#sc.SendAction">SendAction</a>:
+    Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I
+    may send my laptop to you, but that doesn't mean I'm giving it to you).</li> </ul>
     """
     GlutenFreeDiet = schema_storage["GlutenFreeDiet"]
     """A diet exclusive of gluten."""
@@ -1816,26 +1817,26 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     benefits, etc."""
     Grant = schema_storage["Grant"]
     """A grant, typically financial or otherwise quantifiable, of resources. Typically a
-    <a class="localLink" href="/funder">funder</a> sponsors some <a class="localLink"
-    href="/MonetaryAmount">MonetaryAmount</a> to an <a class="localLink"
-    href="/Organization">Organization</a> or <a class="localLink"
-    href="/Person">Person</a>, sometimes not necessarily via a dedicated or long-lived
-    <a class="localLink" href="/Project">Project</a>, resulting in one or more outputs,
-    or <a class="localLink" href="/fundedItem">fundedItem</a>s. For financial
-    sponsorship, indicate the <a class="localLink" href="/funder">funder</a> of a <a
-    class="localLink" href="/MonetaryGrant">MonetaryGrant</a>. For non-financial
-    support, indicate <a class="localLink" href="/sponsor">sponsor</a> of <a
-    class="localLink" href="/Grant">Grant</a>s of resources (e.g. office
-    space).<br/><br/>
+    <a class="localLink" href="#sc.funder">funder</a> sponsors some <a class="localLink"
+    href="#sc.MonetaryAmount">MonetaryAmount</a> to an <a class="localLink"
+    href="#sc.Organization">Organization</a> or <a class="localLink"
+    href="#sc.Person">Person</a>, sometimes not necessarily via a dedicated or long-
+    lived <a class="localLink" href="#sc.Project">Project</a>, resulting in one or more
+    outputs, or <a class="localLink" href="#sc.fundedItem">fundedItem</a>s. For
+    financial sponsorship, indicate the <a class="localLink"
+    href="#sc.funder">funder</a> of a <a class="localLink"
+    href="#sc.MonetaryGrant">MonetaryGrant</a>. For non-financial support, indicate <a
+    class="localLink" href="#sc.sponsor">sponsor</a> of <a class="localLink"
+    href="#sc.Grant">Grant</a>s of resources (e.g. office space).<br/><br/>
 
     Grants support  activities directed towards some agreed collective goals, often but
-    not always organized as <a class="localLink" href="/Project">Project</a>s. Long-
+    not always organized as <a class="localLink" href="#sc.Project">Project</a>s. Long-
     lived projects are sometimes sponsored by a variety of grants over time, but it is
     also common for a project to be associated with a single grant.<br/><br/>
 
-    The amount of a <a class="localLink" href="/Grant">Grant</a> is represented using <a
-    class="localLink" href="/amount">amount</a> as a <a class="localLink"
-    href="/MonetaryAmount">MonetaryAmount</a>.
+    The amount of a <a class="localLink" href="#sc.Grant">Grant</a> is represented using
+    <a class="localLink" href="#sc.amount">amount</a> as a <a class="localLink"
+    href="#sc.MonetaryAmount">MonetaryAmount</a>.
     """
     GraphicNovel = schema_storage["GraphicNovel"]
     """Book format: GraphicNovel. May represent a bound collection of ComicIssue instances."""
@@ -1844,15 +1845,16 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     GroupBoardingPolicy = schema_storage["GroupBoardingPolicy"]
     """The airline boards by groups based on check-in time, priority, etc."""
     Guide = schema_storage["Guide"]
-    """<a class="localLink" href="/Guide">Guide</a> is a page or article that recommend
-    specific products or services, or aspects of a thing for a user to consider.
+    """<a class="localLink" href="#sc.Guide">Guide</a> is a page or article that
+    recommend specific products or services, or aspects of a thing for a user to
+    consider.
 
-    A <a class="localLink" href="/Guide">Guide</a> may represent a Buying Guide and
+    A <a class="localLink" href="#sc.Guide">Guide</a> may represent a Buying Guide and
     detail aspects of products or services for a user to consider. A <a
-    class="localLink" href="/Guide">Guide</a> may represent a Product Guide and
+    class="localLink" href="#sc.Guide">Guide</a> may represent a Product Guide and
     recommend specific products or services. A <a class="localLink"
-    href="/Guide">Guide</a> may represent a Ranked List and recommend specific products
-    or services with ranking.
+    href="#sc.Guide">Guide</a> may represent a Ranked List and recommend specific
+    products or services with ranking.
     """
     Gynecologic = schema_storage["Gynecologic"]
     """A specific branch of medical science that pertains to the health care of women,
@@ -1877,8 +1879,8 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     HealthAspectEnumeration = schema_storage["HealthAspectEnumeration"]
     """HealthAspectEnumeration enumerates several aspects of health content online, each
     of which might be described using <a class="localLink"
-    href="/hasHealthAspect">hasHealthAspect</a> and <a class="localLink"
-    href="/HealthTopicContent">HealthTopicContent</a>."""
+    href="#sc.hasHealthAspect">hasHealthAspect</a> and <a class="localLink"
+    href="#sc.HealthTopicContent">HealthTopicContent</a>."""
     HealthCare = schema_storage["HealthCare"]
     """HealthCare: this is a benefit for health care."""
     HealthClub = schema_storage["HealthClub"]
@@ -1895,19 +1897,11 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     HealthPlanNetwork = schema_storage["HealthPlanNetwork"]
     """A US-style health insurance plan network."""
     HealthTopicContent = schema_storage["HealthTopicContent"]
-    """<a class="localLink" href="/HealthTopicContent">HealthTopicContent</a> is <a
-    class="localLink" href="/WebContent">WebContent</a> that is about some aspect of a
-    health topic, e.g. a condition, its symptoms or treatments.
+    """<a class="localLink" href="#sc.HealthTopicContent">HealthTopicContent</a> is <a
+    class="localLink" href="#sc.WebContent">WebContent</a> that is about some aspect of
+    a health topic, e.g. a condition, its symptoms or treatments.
 
-    Such content may be comprised of several parts or sections and use different types
-    of media. Multiple instances of <a class="localLink"
-    href="/WebContent">WebContent</a> (and hence <a class="localLink"
-    href="/HealthTopicContent">HealthTopicContent</a>) can be related using <a
-    class="localLink" href="/hasPart">hasPart</a> / <a class="localLink"
-    href="/isPartOf">isPartOf</a> where there is some kind of content hierarchy, and
-    their content described with <a class="localLink" href="/about">about</a> and <a
-    class="localLink" href="/mentions">mentions</a> e.g. building upon the existing <a
-    class="localLink" href="/MedicalCondition">MedicalCondition</a> vocabulary.
+    Such content may be comprised of several parts or sections and use different types of media. Multiple instances of <a class="localLink" href="#sc.WebContent">WebContent</a> (and hence <a class="localLink" href="#sc.HealthTopicContent">HealthTopicContent</a>) can be related using <a class="localLink" href="#sc.hasPart">hasPart</a> / <a class="localLink" href="#sc.isPartOf">isPartOf</a> where there is some kind of content hierarchy, and their content described with <a class="localLink" href="#sc.about">about</a> and <a class="localLink" href="#sc.mentions">mentions</a> e.g. building upon the existing <a class="localLink" href="#sc.MedicalCondition">MedicalCondition</a> vocabulary.
     """
     HearingImpairedSupported = schema_storage["HearingImpairedSupported"]
     """Uses devices to support users with hearing impairments."""
@@ -1926,12 +1920,12 @@ This type is deprecated - <a class="localLink" href="/LegalService">LegalService
     """A construction business.<br/><br/>
 
     A HomeAndConstructionBusiness is a <a class="localLink"
-    href="/LocalBusiness">LocalBusiness</a> that provides services around homes and
+    href="#sc.LocalBusiness">LocalBusiness</a> that provides services around homes and
     buildings.<br/><br/>
 
-    As a <a class="localLink" href="/LocalBusiness">LocalBusiness</a> it can be
-    described as a <a class="localLink" href="/provider">provider</a> of one or more <a
-    class="localLink" href="/Service">Service</a>(s).
+    As a <a class="localLink" href="#sc.LocalBusiness">LocalBusiness</a> it can be
+    described as a <a class="localLink" href="#sc.provider">provider</a> of one or more
+    <a class="localLink" href="#sc.Service">Service</a>(s).
     """
     HomeGoodsStore = schema_storage["HomeGoodsStore"]
     """A home goods store."""
@@ -1999,34 +1993,34 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     result."""
     HyperToc = schema_storage["HyperToc"]
     """A HyperToc represents a hypertext table of contents for complex media objects,
-    such as <a class="localLink" href="/VideoObject">VideoObject</a>, <a
-    class="localLink" href="/AudioObject">AudioObject</a>.
+    such as <a class="localLink" href="#sc.VideoObject">VideoObject</a>, <a
+    class="localLink" href="#sc.AudioObject">AudioObject</a>.
 
     Items in the table of contents are indicated using the <a class="localLink"
-    href="/tocEntry">tocEntry</a> property, and typed <a class="localLink"
-    href="/HyperTocEntry">HyperTocEntry</a>. For cases where the same larger work is
+    href="#sc.tocEntry">tocEntry</a> property, and typed <a class="localLink"
+    href="#sc.HyperTocEntry">HyperTocEntry</a>. For cases where the same larger work is
     split into multiple files, <a class="localLink"
-    href="/associatedMedia">associatedMedia</a> can be used on individual <a
-    class="localLink" href="/HyperTocEntry">HyperTocEntry</a> items.
+    href="#sc.associatedMedia">associatedMedia</a> can be used on individual <a
+    class="localLink" href="#sc.HyperTocEntry">HyperTocEntry</a> items.
     """
     HyperTocEntry = schema_storage["HyperTocEntry"]
     """A HyperToEntry is an item within a <a class="localLink"
-    href="/HyperToc">HyperToc</a>, which represents a hypertext table of contents for
+    href="#sc.HyperToc">HyperToc</a>, which represents a hypertext table of contents for
     complex media objects, such as <a class="localLink"
-    href="/VideoObject">VideoObject</a>, <a class="localLink"
-    href="/AudioObject">AudioObject</a>.
+    href="#sc.VideoObject">VideoObject</a>, <a class="localLink"
+    href="#sc.AudioObject">AudioObject</a>.
 
     The media object itself is indicated using <a class="localLink"
-    href="/associatedMedia">associatedMedia</a>. Each section of interest within that
+    href="#sc.associatedMedia">associatedMedia</a>. Each section of interest within that
     content can be described with a <a class="localLink"
-    href="/HyperTocEntry">HyperTocEntry</a>, with associated <a class="localLink"
-    href="/startOffset">startOffset</a> and <a class="localLink"
-    href="/endOffset">endOffset</a>. When several entries are all from the same file, <a
-    class="localLink" href="/associatedMedia">associatedMedia</a> is used on the
-    overarching <a class="localLink" href="/HyperTocEntry">HyperTocEntry</a>; if the
+    href="#sc.HyperTocEntry">HyperTocEntry</a>, with associated <a class="localLink"
+    href="#sc.startOffset">startOffset</a> and <a class="localLink"
+    href="#sc.endOffset">endOffset</a>. When several entries are all from the same file,
+    <a class="localLink" href="#sc.associatedMedia">associatedMedia</a> is used on the
+    overarching <a class="localLink" href="#sc.HyperTocEntry">HyperTocEntry</a>; if the
     content has been split into multiple files, they can be referenced using <a
-    class="localLink" href="/associatedMedia">associatedMedia</a> on each <a
-    class="localLink" href="/HyperTocEntry">HyperTocEntry</a>.
+    class="localLink" href="#sc.associatedMedia">associatedMedia</a> on each <a
+    class="localLink" href="#sc.HyperTocEntry">HyperTocEntry</a>.
     """
     IceCreamShop = schema_storage["IceCreamShop"]
     """An ice cream shop."""
@@ -2140,12 +2134,13 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/RegisterAction">RegisterAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.RegisterAction">RegisterAction</a>: Unlike
     RegisterAction, JoinAction refers to joining a group/team of people.</li> <li><a
-    class="localLink" href="/SubscribeAction">SubscribeAction</a>: Unlike
+    class="localLink" href="#sc.SubscribeAction">SubscribeAction</a>: Unlike
     SubscribeAction, JoinAction does not imply that you'll be receiving updates.</li>
-    <li><a class="localLink" href="/FollowAction">FollowAction</a>: Unlike FollowAction,
-    JoinAction does not imply that you'll be polling for updates.</li> </ul>
+    <li><a class="localLink" href="#sc.FollowAction">FollowAction</a>: Unlike
+    FollowAction, JoinAction does not imply that you'll be polling for updates.</li>
+    </ul>
     """
     Joint = schema_storage["Joint"]
     """The anatomical location at which two or more bones make contact."""
@@ -2169,26 +2164,28 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     Language = schema_storage["Language"]
     """Natural languages such as Spanish, Tamil, Hindi, English, etc.
 
-    Formal language code tags expressed in <a href="https://en.wikipedia.org/wiki/IETF_language_tag">BCP 47</a> can be used via the <a class="localLink" href="/alternateName">alternateName</a> property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using <a class="localLink" href="/ComputerLanguage">ComputerLanguage</a>.
+    Formal language code tags expressed in <a href="https://en.wikipedia.org/wiki/IETF_language_tag">BCP 47</a> can be used via the <a class="localLink" href="#sc.alternateName">alternateName</a> property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using <a class="localLink" href="#sc.ComputerLanguage">ComputerLanguage</a>.
     """
     LaserDiscFormat = schema_storage["LaserDiscFormat"]
     """LaserDiscFormat."""
     LearningResource = schema_storage["LearningResource"]
     """The LearningResource type can be used to indicate <a class="localLink"
-    href="/CreativeWork">CreativeWork</a>s (whether physical or digital) that have a
+    href="#sc.CreativeWork">CreativeWork</a>s (whether physical or digital) that have a
     particular and explicit orientation towards learning, education, skill acquisition,
     and other educational purposes.<br/><br/>
 
-    <a class="localLink" href="/LearningResource">LearningResource</a> is expected to be
-    used as an addition to a primary type such as <a class="localLink"
-    href="/Book">Book</a>, <a class="localLink" href="/VideoObject">VideoObject</a>, <a
-    class="localLink" href="/Product">Product</a> etc.<br/><br/>
+    <a class="localLink" href="#sc.LearningResource">LearningResource</a> is expected to
+    be used as an addition to a primary type such as <a class="localLink"
+    href="#sc.Book">Book</a>, <a class="localLink"
+    href="#sc.VideoObject">VideoObject</a>, <a class="localLink"
+    href="#sc.Product">Product</a> etc.<br/><br/>
 
-    <a class="localLink" href="/EducationEvent">EducationEvent</a> serves a similar
-    purpose for event-like things (e.g. a <a class="localLink" href="/Trip">Trip</a>). A
-    <a class="localLink" href="/LearningResource">LearningResource</a> may be created as
-    a result of an <a class="localLink" href="/EducationEvent">EducationEvent</a>, for
-    example by recording one.
+    <a class="localLink" href="#sc.EducationEvent">EducationEvent</a> serves a similar
+    purpose for event-like things (e.g. a <a class="localLink"
+    href="#sc.Trip">Trip</a>). A <a class="localLink"
+    href="#sc.LearningResource">LearningResource</a> may be created as a result of an <a
+    class="localLink" href="#sc.EducationEvent">EducationEvent</a>, for example by
+    recording one.
     """
     LeaveAction = schema_storage["LeaveAction"]
     """An agent leaves an event / group with participants/friends at a
@@ -2196,10 +2193,10 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/JoinAction">JoinAction</a>: The antonym of
+    <ul> <li><a class="localLink" href="#sc.JoinAction">JoinAction</a>: The antonym of
     LeaveAction.</li> <li><a class="localLink"
-    href="/UnRegisterAction">UnRegisterAction</a>: Unlike UnRegisterAction, LeaveAction
-    implies leaving a group/team of people rather than a service.</li> </ul>
+    href="#sc.UnRegisterAction">UnRegisterAction</a>: Unlike UnRegisterAction,
+    LeaveAction implies leaving a group/team of people rather than a service.</li> </ul>
     """
     LeftHandDriving = schema_storage["LeftHandDriving"]
     """The steering position is on the left side of the vehicle (viewed from the main
@@ -2210,9 +2207,9 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     """A LegalService is a business that provides legally-oriented services, advice and
     representation, e.g. law firms.<br/><br/>
 
-    As a <a class="localLink" href="/LocalBusiness">LocalBusiness</a> it can be
-    described as a <a class="localLink" href="/provider">provider</a> of one or more <a
-    class="localLink" href="/Service">Service</a>(s).
+    As a <a class="localLink" href="#sc.LocalBusiness">LocalBusiness</a> it can be
+    described as a <a class="localLink" href="#sc.provider">provider</a> of one or more
+    <a class="localLink" href="#sc.Service">Service</a>(s).
     """
     LegalValueLevel = schema_storage["LegalValueLevel"]
     """A list of possible levels for the legal validity of a legislation."""
@@ -2240,14 +2237,14 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/BorrowAction">BorrowAction</a>: Reciprocal of
-    LendAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.BorrowAction">BorrowAction</a>: Reciprocal
+    of LendAction.</li> </ul>
     """
     Library = schema_storage["Library"]
     """A library."""
     LibrarySystem = schema_storage["LibrarySystem"]
-    """A <a class="localLink" href="/LibrarySystem">LibrarySystem</a> is a collaborative
-    system amongst several libraries."""
+    """A <a class="localLink" href="#sc.LibrarySystem">LibrarySystem</a> is a
+    collaborative system amongst several libraries."""
     LifestyleModification = schema_storage["LifestyleModification"]
     """A process of care involving exercise, changes to diet, fitness routines, and
     other lifestyle changes aimed at improving a health condition."""
@@ -2379,15 +2376,15 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
         "MediaManipulationRatingEnumeration"
     ]
     """Codes for use with the <a class="localLink"
-    href="/mediaAuthenticityCategory">mediaAuthenticityCategory</a> property, indicating
-    the authenticity of a media object (in the context of how it was published or
-    shared).
+    href="#sc.mediaAuthenticityCategory">mediaAuthenticityCategory</a> property,
+    indicating the authenticity of a media object (in the context of how it was
+    published or shared).
 
     In general these codes are not mutually exclusive, although some combinations (such
     as 'original' versus 'transformed', 'edited' and 'staged') would be contradictory if
-    applied in the same <a class="localLink" href="/MediaReview">MediaReview</a>. Note
-    that the application of these codes is with regard to a piece of media shared or
-    published in a particular context.
+    applied in the same <a class="localLink" href="#sc.MediaReview">MediaReview</a>.
+    Note that the application of these codes is with regard to a piece of media shared
+    or published in a particular context.
     """
     MediaObject = schema_storage["MediaObject"]
     """A media object, such as an image, video, or audio object embedded in a web page
@@ -2398,13 +2395,13 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
     """
     MediaReview = schema_storage["MediaReview"]
-    """A <a class="localLink" href="/MediaReview">MediaReview</a> is a more specialized
-    form of Review dedicated to the evaluation of media content online, typically in the
-    context of fact-checking and misinformation.
+    """A <a class="localLink" href="#sc.MediaReview">MediaReview</a> is a more
+    specialized form of Review dedicated to the evaluation of media content online,
+    typically in the context of fact-checking and misinformation.
 
-    For more general reviews of media in the broader sense, use <a class="localLink" href="/UserReview">UserReview</a>, <a class="localLink" href="/CriticReview">CriticReview</a> or other <a class="localLink" href="/Review">Review</a> types. This definition is
-    a work in progress. While the <a class="localLink" href="/MediaManipulationRatingEnumeration">MediaManipulationRatingEnumeration</a> list reflects significant community review amongst fact-checkers and others working
-    to combat misinformation, the specific structures for representing media objects, their versions and publication context, is still evolving. Similarly, best practices for the relationship between <a class="localLink" href="/MediaReview">MediaReview</a> and <a class="localLink" href="/ClaimReview">ClaimReview</a> markup has not yet been finalized.
+    For more general reviews of media in the broader sense, use <a class="localLink" href="#sc.UserReview">UserReview</a>, <a class="localLink" href="#sc.CriticReview">CriticReview</a> or other <a class="localLink" href="#sc.Review">Review</a> types. This definition is
+    a work in progress. While the <a class="localLink" href="#sc.MediaManipulationRatingEnumeration">MediaManipulationRatingEnumeration</a> list reflects significant community review amongst fact-checkers and others working
+    to combat misinformation, the specific structures for representing media objects, their versions and publication context, is still evolving. Similarly, best practices for the relationship between <a class="localLink" href="#sc.MediaReview">MediaReview</a> and <a class="localLink" href="#sc.ClaimReview">ClaimReview</a> markup has not yet been finalized.
     """
     MediaSubscription = schema_storage["MediaSubscription"]
     """A subscription which allows a user to access media including audio, video, books,
@@ -2644,8 +2641,8 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     """MerchantReturnNotPermitted: product returns are not permitted."""
     MerchantReturnPolicy = schema_storage["MerchantReturnPolicy"]
     """A MerchantReturnPolicy provides information about product return policies
-    associated with an <a class="localLink" href="/Organization">Organization</a> or <a
-    class="localLink" href="/Product">Product</a>."""
+    associated with an <a class="localLink" href="#sc.Organization">Organization</a> or
+    <a class="localLink" href="#sc.Product">Product</a>."""
     MerchantReturnUnlimitedWindow = schema_storage["MerchantReturnUnlimitedWindow"]
     """MerchantReturnUnlimitedWindow: there is an unlimited window for product returns."""
     MerchantReturnUnspecified = schema_storage["MerchantReturnUnspecified"]
@@ -2678,11 +2675,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     MonetaryAmount = schema_storage["MonetaryAmount"]
     """A monetary value or range.
 
-    This type can be used to describe an amount of money such as $50 USD, or a range as
-    in describing a bank account being suitable for a balance between £1,000 and
-    £1,000,000 GBP, or the value of a salary, etc. It is recommended to use <a
-    class="localLink" href="/PriceSpecification">PriceSpecification</a> Types to
-    describe the price of an Offer, Invoice, etc.
+    This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use <a class="localLink" href="#sc.PriceSpecification">PriceSpecification</a> Types to describe the price of an Offer, Invoice, etc.
     """
     MonetaryAmountDistribution = schema_storage["MonetaryAmountDistribution"]
     """A statistical distribution of monetary amounts."""
@@ -2722,7 +2715,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/TransferAction">TransferAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.TransferAction">TransferAction</a>: Unlike
     TransferAction, the subject of the move is a living Person or Organization rather
     than an inanimate object.</li> </ul>
     """
@@ -2935,13 +2928,13 @@ Usage guidelines:<br/><br/>
     """The character of a medical substance, typically a medicine, of being available
     over the counter or not."""
     Observation = schema_storage["Observation"]
-    """Instances of the class <a class="localLink" href="/Observation">Observation</a>
-    are used to specify observations about an entity (which may or may not be an
-    instance of a <a class="localLink"
-    href="/StatisticalPopulation">StatisticalPopulation</a>), at a particular time.
+    """Instances of the class <a class="localLink"
+    href="#sc.Observation">Observation</a> are used to specify observations about an
+    entity (which may or may not be an instance of a <a class="localLink"
+    href="#sc.StatisticalPopulation">StatisticalPopulation</a>), at a particular time.
 
-    The principal properties of an <a class="localLink" href="/Observation">Observation</a> are <a class="localLink" href="/observedNode">observedNode</a>, <a class="localLink" href="/measuredProperty">measuredProperty</a>, <a class="localLink" href="/measuredValue">measuredValue</a> (or <a class="localLink" href="/median">median</a>, etc.) and <a class="localLink" href="/observationDate">observationDate</a> (<a class="localLink" href="/measuredProperty">measuredProperty</a> properties can, but need not always, be W3C RDF Data Cube "measure properties", as in the <a href="https://www.w3.org/TR/vocab-data-cube/#dsd-example">lifeExpectancy example</a>).
-    See also <a class="localLink" href="/StatisticalPopulation">StatisticalPopulation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.
+    The principal properties of an <a class="localLink" href="#sc.Observation">Observation</a> are <a class="localLink" href="#sc.observedNode">observedNode</a>, <a class="localLink" href="#sc.measuredProperty">measuredProperty</a>, <a class="localLink" href="#sc.measuredValue">measuredValue</a> (or <a class="localLink" href="#sc.median">median</a>, etc.) and <a class="localLink" href="#sc.observationDate">observationDate</a> (<a class="localLink" href="#sc.measuredProperty">measuredProperty</a> properties can, but need not always, be W3C RDF Data Cube "measure properties", as in the <a href="https://www.w3.org/TR/vocab-data-cube/#dsd-example">lifeExpectancy example</a>).
+    See also <a class="localLink" href="#sc.StatisticalPopulation">StatisticalPopulation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.
     """
     Observational = schema_storage["Observational"]
     """An observational study design."""
@@ -2960,7 +2953,7 @@ Usage guidelines:<br/><br/>
         "OccupationalExperienceRequirements"
     ]
     """Indicates employment-related experience requirements, e.g. <a class="localLink"
-    href="/monthsOfExperience">monthsOfExperience</a>."""
+    href="#sc.monthsOfExperience">monthsOfExperience</a>."""
     OccupationalTherapy = schema_storage["OccupationalTherapy"]
     """A treatment of people with physical, emotional, or social problems, using
     purposeful activity to help them overcome or learn to deal with their problems."""
@@ -2971,7 +2964,7 @@ Usage guidelines:<br/><br/>
     example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream
     a TV show over the internet, to repair a motorcycle, or to loan a book.<br/><br/>
 
-    Note: As the <a class="localLink" href="/businessFunction">businessFunction</a> property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.<br/><br/>
+    Note: As the <a class="localLink" href="#sc.businessFunction">businessFunction</a> property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.<br/><br/>
 
     For <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related fields, see <a href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check Digit calculator</a> and <a href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation guide</a> from <a href="http://www.gs1.org/">GS1</a>.
     """
@@ -2979,12 +2972,12 @@ Usage guidelines:<br/><br/>
     """An OfferCatalog is an ItemList that contains related Offers and/or further
     OfferCatalogs that are offeredBy the same provider."""
     OfferForLease = schema_storage["OfferForLease"]
-    """An <a class="localLink" href="/OfferForLease">OfferForLease</a> in Schema.org represents an <a class="localLink" href="/Offer">Offer</a> to lease out something, i.e. an <a class="localLink" href="/Offer">Offer</a> whose
-  <a class="localLink" href="/businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#LeaseOut.">lease out</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
+    """An <a class="localLink" href="#sc.OfferForLease">OfferForLease</a> in Schema.org represents an <a class="localLink" href="#sc.Offer">Offer</a> to lease out something, i.e. an <a class="localLink" href="#sc.Offer">Offer</a> whose
+  <a class="localLink" href="#sc.businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#LeaseOut.">lease out</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
   background on the underlying concepts."""
     OfferForPurchase = schema_storage["OfferForPurchase"]
-    """An <a class="localLink" href="/OfferForPurchase">OfferForPurchase</a> in Schema.org represents an <a class="localLink" href="/Offer">Offer</a> to sell something, i.e. an <a class="localLink" href="/Offer">Offer</a> whose
-  <a class="localLink" href="/businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#Sell.">sell</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
+    """An <a class="localLink" href="#sc.OfferForPurchase">OfferForPurchase</a> in Schema.org represents an <a class="localLink" href="#sc.Offer">Offer</a> to sell something, i.e. an <a class="localLink" href="#sc.Offer">Offer</a> whose
+  <a class="localLink" href="#sc.businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#Sell.">sell</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
   background on the underlying concepts."""
     OfferItemCondition = schema_storage["OfferItemCondition"]
     """A list of possible conditions for the item."""
@@ -3046,22 +3039,22 @@ Usage guidelines:<br/><br/>
     certain service inside a place.<br/><br/>
 
     The place is <strong>open</strong> if the <a class="localLink"
-    href="/opens">opens</a> property is specified, and <strong>closed</strong>
+    href="#sc.opens">opens</a> property is specified, and <strong>closed</strong>
     otherwise.<br/><br/>
 
-    If the value for the <a class="localLink" href="/closes">closes</a> property is less
-    than the value for the <a class="localLink" href="/opens">opens</a> property then
-    the hour range is assumed to span over the next day.
+    If the value for the <a class="localLink" href="#sc.closes">closes</a> property is
+    less than the value for the <a class="localLink" href="#sc.opens">opens</a> property
+    then the hour range is assumed to span over the next day.
     """
     OpinionNewsArticle = schema_storage["OpinionNewsArticle"]
-    """An <a class="localLink" href="/OpinionNewsArticle">OpinionNewsArticle</a> is a <a
-    class="localLink" href="/NewsArticle">NewsArticle</a> that primarily expresses
+    """An <a class="localLink" href="#sc.OpinionNewsArticle">OpinionNewsArticle</a> is a
+    <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> that primarily expresses
     opinions rather than journalistic reporting of news and events.
 
-    For example, a <a class="localLink" href="/NewsArticle">NewsArticle</a> consisting
-    of a column or <a class="localLink" href="/Blog">Blog</a>/<a class="localLink"
-    href="/BlogPosting">BlogPosting</a> entry in the Opinions section of a news
-    publication.
+    For example, a <a class="localLink" href="#sc.NewsArticle">NewsArticle</a>
+    consisting of a column or <a class="localLink" href="#sc.Blog">Blog</a>/<a
+    class="localLink" href="#sc.BlogPosting">BlogPosting</a> entry in the Opinions
+    section of a news publication.
     """
     Optician = schema_storage["Optician"]
     """A store that sells reading glasses and similar devices for improving vision."""
@@ -3106,23 +3099,23 @@ Usage guidelines:<br/><br/>
     objects."""
     OriginalMediaContent = schema_storage["OriginalMediaContent"]
     """Content coded 'as original media content' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'original': No
-    evidence the footage has been misleadingly altered or manipulated, though it may
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'original':
+    No evidence the footage has been misleadingly altered or manipulated, though it may
     contain false or misleading claims.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'original': No
-    evidence the image has been misleadingly altered or manipulated, though it may still
-    contain false or misleading claims.<br/><br/>
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be 'original':
+    No evidence the image has been misleadingly altered or manipulated, though it may
+    still contain false or misleading claims.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'original': No evidence the image has been misleadingly altered or
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'original': No evidence the image has been misleadingly altered or
     manipulated, though it may still contain false or misleading claims.<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'original': No
-    evidence the audio has been misleadingly altered or manipulated, though it may
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be 'original':
+    No evidence the audio has been misleadingly altered or manipulated, though it may
     contain false or misleading claims.
     """
     OriginalShippingFees = schema_storage["OriginalShippingFees"]
@@ -3334,7 +3327,7 @@ Usage guidelines:<br/><br/>
     """A play is a form of literature, usually consisting of dialogue between
     characters, intended for theatrical performance rather than just reading.
 
-    Note the peformance of a Play would be a <a class="localLink" href="/TheaterEvent">TheaterEvent</a> - the <em>Play</em> being the <a class="localLink" href="/workPerformed">workPerformed</a>.
+    Note the peformance of a Play would be a <a class="localLink" href="#sc.TheaterEvent">TheaterEvent</a> - the <em>Play</em> being the <a class="localLink" href="#sc.workPerformed">workPerformed</a>.
     """
     PlayAction = schema_storage["PlayAction"]
     """The act of playing/exercising/training/performing for enjoyment, leisure,
@@ -3342,10 +3335,10 @@ Usage guidelines:<br/><br/>
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ListenAction">ListenAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.ListenAction">ListenAction</a>: Unlike
     ListenAction (which is under ConsumeAction), PlayAction refers to performing for an
     audience or at an event, rather than consuming music.</li> <li><a class="localLink"
-    href="/WatchAction">WatchAction</a>: Unlike WatchAction (which is under
+    href="#sc.WatchAction">WatchAction</a>: Unlike WatchAction (which is under
     ConsumeAction), PlayAction refers to showing/displaying for an audience or at an
     event, rather than consuming visual content.</li> </ul>
     """
@@ -3377,8 +3370,8 @@ Usage guidelines:<br/><br/>
     """The mailing address."""
     PostalCodeRangeSpecification = schema_storage["PostalCodeRangeSpecification"]
     """Indicates a range of postalcodes, usually defined as the set of valid codes
-    between <a class="localLink" href="/postalCodeBegin">postalCodeBegin</a> and <a
-    class="localLink" href="/postalCodeEnd">postalCodeEnd</a>, inclusively."""
+    between <a class="localLink" href="#sc.postalCodeBegin">postalCodeBegin</a> and <a
+    class="localLink" href="#sc.postalCodeEnd">postalCodeEnd</a>, inclusively."""
     Poster = schema_storage["Poster"]
     """A large, usually printed placard, bill, or announcement, often illustrated, that
     is posted to advertise or publicize something."""
@@ -3414,7 +3407,7 @@ Usage guidelines:<br/><br/>
     """A structured value representing a price or price range.
 
     Typically, only the subclasses of this type are used for markup. It is recommended
-    to use <a class="localLink" href="/MonetaryAmount">MonetaryAmount</a> to describe
+    to use <a class="localLink" href="#sc.MonetaryAmount">MonetaryAmount</a> to describe
     independent amounts of money such as a salary, credit card limits, etc.
     """
     PriceTypeEnumeration = schema_storage["PriceTypeEnumeration"]
@@ -3433,25 +3426,25 @@ Usage guidelines:<br/><br/>
     """
     ProductCollection = schema_storage["ProductCollection"]
     """A set of products (either <a class="localLink"
-    href="/ProductGroup">ProductGroup</a>s or specific variants) that are listed
-    together e.g. in an <a class="localLink" href="/Offer">Offer</a>."""
+    href="#sc.ProductGroup">ProductGroup</a>s or specific variants) that are listed
+    together e.g. in an <a class="localLink" href="#sc.Offer">Offer</a>."""
     ProductGroup = schema_storage["ProductGroup"]
     """A ProductGroup represents a group of <a class="localLink"
-    href="/Product">Product</a>s that vary only in certain well-described ways, such as
-    by <a class="localLink" href="/size">size</a>, <a class="localLink"
-    href="/color">color</a>, <a class="localLink" href="/material">material</a>
+    href="#sc.Product">Product</a>s that vary only in certain well-described ways, such
+    as by <a class="localLink" href="#sc.size">size</a>, <a class="localLink"
+    href="#sc.color">color</a>, <a class="localLink" href="#sc.material">material</a>
     etc.<br/><br/>
 
     While a ProductGroup itself is not directly offered for sale, the various varying
     products that it represents can be. The ProductGroup serves as a prototype or
     template, standing in for all of the products who have an <a class="localLink"
-    href="/isVariantOf">isVariantOf</a> relationship to it. As such, properties
+    href="#sc.isVariantOf">isVariantOf</a> relationship to it. As such, properties
     (including additional types) can be applied to the ProductGroup to represent
     characteristics shared by each of the (possibly very many) variants. Properties that
     reference a ProductGroup are not included in this mechanism; neither are the
-    following specific properties <a class="localLink" href="/variesBy">variesBy</a>, <a
-    class="localLink" href="/hasVariant">hasVariant</a>, <a class="localLink"
-    href="/url">url</a>.
+    following specific properties <a class="localLink" href="#sc.variesBy">variesBy</a>,
+    <a class="localLink" href="#sc.hasVariant">hasVariant</a>, <a class="localLink"
+    href="#sc.url">url</a>.
     """
     ProductModel = schema_storage["ProductModel"]
     """A datasheet or vendor specification of a product (in the sense of a prototypical
@@ -3467,8 +3460,8 @@ Usage guidelines:<br/><br/>
     """ProductReturnNotPermitted: product returns are not permitted."""
     ProductReturnPolicy = schema_storage["ProductReturnPolicy"]
     """A ProductReturnPolicy provides information about product return policies
-    associated with an <a class="localLink" href="/Organization">Organization</a> or <a
-    class="localLink" href="/Product">Product</a>."""
+    associated with an <a class="localLink" href="#sc.Organization">Organization</a> or
+    <a class="localLink" href="#sc.Product">Product</a>."""
     ProductReturnUnlimitedWindow = schema_storage["ProductReturnUnlimitedWindow"]
     """ProductReturnUnlimitedWindow: there is an unlimited window for product returns."""
     ProductReturnUnspecified = schema_storage["ProductReturnUnspecified"]
@@ -3476,9 +3469,9 @@ Usage guidelines:<br/><br/>
     ProfessionalService = schema_storage["ProfessionalService"]
     """Original definition: "provider of professional services."<br/><br/>
 
-The general <a class="localLink" href="/ProfessionalService">ProfessionalService</a> type for local businesses was deprecated due to confusion with <a class="localLink" href="/Service">Service</a>. For reference, the types that it included were: <a class="localLink" href="/Dentist">Dentist</a>,
-        <a class="localLink" href="/AccountingService">AccountingService</a>, <a class="localLink" href="/Attorney">Attorney</a>, <a class="localLink" href="/Notary">Notary</a>, as well as types for several kinds of <a class="localLink" href="/HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>: <a class="localLink" href="/Electrician">Electrician</a>, <a class="localLink" href="/GeneralContractor">GeneralContractor</a>,
-        <a class="localLink" href="/HousePainter">HousePainter</a>, <a class="localLink" href="/Locksmith">Locksmith</a>, <a class="localLink" href="/Plumber">Plumber</a>, <a class="localLink" href="/RoofingContractor">RoofingContractor</a>. <a class="localLink" href="/LegalService">LegalService</a> was introduced as a more inclusive supertype of <a class="localLink" href="/Attorney">Attorney</a>."""
+The general <a class="localLink" href="#sc.ProfessionalService">ProfessionalService</a> type for local businesses was deprecated due to confusion with <a class="localLink" href="#sc.Service">Service</a>. For reference, the types that it included were: <a class="localLink" href="#sc.Dentist">Dentist</a>,
+        <a class="localLink" href="#sc.AccountingService">AccountingService</a>, <a class="localLink" href="#sc.Attorney">Attorney</a>, <a class="localLink" href="#sc.Notary">Notary</a>, as well as types for several kinds of <a class="localLink" href="#sc.HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>: <a class="localLink" href="#sc.Electrician">Electrician</a>, <a class="localLink" href="#sc.GeneralContractor">GeneralContractor</a>,
+        <a class="localLink" href="#sc.HousePainter">HousePainter</a>, <a class="localLink" href="#sc.Locksmith">Locksmith</a>, <a class="localLink" href="#sc.Plumber">Plumber</a>, <a class="localLink" href="#sc.RoofingContractor">RoofingContractor</a>. <a class="localLink" href="#sc.LegalService">LegalService</a> was introduced as a more inclusive supertype of <a class="localLink" href="#sc.Attorney">Attorney</a>."""
     ProfilePage = schema_storage["ProfilePage"]
     """Web page type: Profile page."""
     PrognosisHealthAspect = schema_storage["PrognosisHealthAspect"]
@@ -3490,10 +3483,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """An enterprise (potentially individual but typically collaborative), planned to
     achieve a particular aim.
 
-    Use properties from <a class="localLink" href="/Organization">Organization</a>, <a
-    class="localLink" href="/subOrganization">subOrganization</a>/<a class="localLink"
-    href="/parentOrganization">parentOrganization</a> to indicate project sub-
-    structures.
+    Use properties from <a class="localLink" href="#sc.Organization">Organization</a>, <a class="localLink" href="#sc.subOrganization">subOrganization</a>/<a class="localLink" href="#sc.parentOrganization">parentOrganization</a> to indicate project sub-structures.
     """
     PronounceableText = schema_storage["PronounceableText"]
     """Data type: PronounceableText."""
@@ -3527,7 +3517,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """This stands for any day that is a public holiday; it is a placeholder for all
     official public holidays in some particular location.
 
-    While not technically a "day of the week", it can be used with <a class="localLink" href="/OpeningHoursSpecification">OpeningHoursSpecification</a>. In the context of an opening hours specification it can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.
+    While not technically a "day of the week", it can be used with <a class="localLink" href="#sc.OpeningHoursSpecification">OpeningHoursSpecification</a>. In the context of an opening hours specification it can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.
     """
     PublicSwimmingPool = schema_storage["PublicSwimmingPool"]
     """A public swimming pool."""
@@ -3577,7 +3567,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     Quotation = schema_storage["Quotation"]
     """A quotation.
 
-    Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use <a class="localLink" href="/isBasedOn">isBasedOn</a> to link to source/origin. The <a class="localLink" href="/recordedIn">recordedIn</a> property can be used to reference a Quotation from an <a class="localLink" href="/Event">Event</a>.
+    Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use <a class="localLink" href="#sc.isBasedOn">isBasedOn</a> to link to source/origin. The <a class="localLink" href="#sc.recordedIn">recordedIn</a> property can be used to reference a Quotation from an <a class="localLink" href="#sc.Event">Event</a>.
     """
     QuoteAction = schema_storage["QuoteAction"]
     """An agent quotes/estimates/appraises an object/product/service with a price at a
@@ -3622,15 +3612,15 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     RealEstateAgent = schema_storage["RealEstateAgent"]
     """A real-estate agent."""
     RealEstateListing = schema_storage["RealEstateListing"]
-    """A <a class="localLink" href="/RealEstateListing">RealEstateListing</a> is a
+    """A <a class="localLink" href="#sc.RealEstateListing">RealEstateListing</a> is a
     listing that describes one or more real-estate <a class="localLink"
-    href="/Offer">Offer</a>s (whose <a class="localLink"
-    href="/businessFunction">businessFunction</a> is typically to lease out, or to
+    href="#sc.Offer">Offer</a>s (whose <a class="localLink"
+    href="#sc.businessFunction">businessFunction</a> is typically to lease out, or to
     sell).
 
-    The <a class="localLink" href="/RealEstateListing">RealEstateListing</a> type itself
-    represents the overall listing, as manifested in some <a class="localLink"
-    href="/WebPage">WebPage</a>.
+    The <a class="localLink" href="#sc.RealEstateListing">RealEstateListing</a> type
+    itself represents the overall listing, as manifested in some <a class="localLink"
+    href="#sc.WebPage">WebPage</a>.
     """
     RearWheelDriveConfiguration = schema_storage["RearWheelDriveConfiguration"]
     """Real-wheel drive is a transmission layout where the engine drives the rear
@@ -3641,31 +3631,31 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/SendAction">SendAction</a>: The reciprocal of
-    ReceiveAction.</li> <li><a class="localLink" href="/TakeAction">TakeAction</a>:
-    Unlike TakeAction, ReceiveAction does not imply that the ownership has been
-    transfered (e.g. I can receive a package, but it does not mean the package is now
-    mine).</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.SendAction">SendAction</a>: The reciprocal
+    of ReceiveAction.</li> <li><a class="localLink"
+    href="#sc.TakeAction">TakeAction</a>: Unlike TakeAction, ReceiveAction does not
+    imply that the ownership has been transfered (e.g. I can receive a package, but it
+    does not mean the package is now mine).</li> </ul>
     """
     Recipe = schema_storage["Recipe"]
     """A recipe.
 
     For dietary restrictions covered by the recipe, a few common restrictions are
-    enumerated via <a class="localLink" href="/suitableForDiet">suitableForDiet</a>. The
-    <a class="localLink" href="/keywords">keywords</a> property can also be used to add
-    more detail.
+    enumerated via <a class="localLink" href="#sc.suitableForDiet">suitableForDiet</a>.
+    The <a class="localLink" href="#sc.keywords">keywords</a> property can also be used
+    to add more detail.
     """
     Recommendation = schema_storage["Recommendation"]
-    """<a class="localLink" href="/Recommendation">Recommendation</a> is a type of <a
-    class="localLink" href="/Review">Review</a> that suggests or proposes something as
-    the best option or best course of action.
+    """<a class="localLink" href="#sc.Recommendation">Recommendation</a> is a type of <a
+    class="localLink" href="#sc.Review">Review</a> that suggests or proposes something
+    as the best option or best course of action.
 
     Recommendations may be for products or services, or other concrete things, as in the
     case of a ranked list or product guide. A <a class="localLink"
-    href="/Guide">Guide</a> may list multiple recommendations for different categories.
-    For example, in a <a class="localLink" href="/Guide">Guide</a> about which TVs to
-    buy, the author may have several <a class="localLink"
-    href="/Recommendation">Recommendation</a>s.
+    href="#sc.Guide">Guide</a> may list multiple recommendations for different
+    categories. For example, in a <a class="localLink" href="#sc.Guide">Guide</a> about
+    which TVs to buy, the author may have several <a class="localLink"
+    href="#sc.Recommendation">Recommendation</a>s.
     """
     RecommendedDoseSchedule = schema_storage["RecommendedDoseSchedule"]
     """A recommended dosing schedule for a drug or supplement as prescribed or
@@ -3687,13 +3677,14 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/JoinAction">JoinAction</a>: Unlike JoinAction,
-    RegisterAction implies you are registering to be a user of a service, <em>not</em> a
-    group/team of people.</li> <li>[FollowAction]]: Unlike FollowAction, RegisterAction
-    doesn't imply that the agent is expecting to poll for updates from the object.</li>
-    <li><a class="localLink" href="/SubscribeAction">SubscribeAction</a>: Unlike
-    SubscribeAction, RegisterAction doesn't imply that the agent is expecting updates
-    from the object.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.JoinAction">JoinAction</a>: Unlike
+    JoinAction, RegisterAction implies you are registering to be a user of a service,
+    <em>not</em> a group/team of people.</li> <li>[FollowAction]]: Unlike FollowAction,
+    RegisterAction doesn't imply that the agent is expecting to poll for updates from
+    the object.</li> <li><a class="localLink"
+    href="#sc.SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction,
+    RegisterAction doesn't imply that the agent is expecting updates from the
+    object.</li> </ul>
     """
     Registry = schema_storage["Registry"]
     """A registry-based study design."""
@@ -3705,8 +3696,8 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/AcceptAction">AcceptAction</a>: The antonym of
-    RejectAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.AcceptAction">AcceptAction</a>: The antonym
+    of RejectAction.</li> </ul>
     """
     RelatedTopicsHealthAspect = schema_storage["RelatedTopicsHealthAspect"]
     """Other prominent or relevant topics tied to the main topic."""
@@ -3735,26 +3726,26 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """The act of editing a recipient by replacing an old object with a new object."""
     ReplyAction = schema_storage["ReplyAction"]
     """The act of responding to a question/message asked/sent by the object. Related to
-    <a class="localLink" href="/AskAction">AskAction</a><br/><br/>
+    <a class="localLink" href="#sc.AskAction">AskAction</a><br/><br/>
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/AskAction">AskAction</a>: Appears generally as
-    an origin of a ReplyAction.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.AskAction">AskAction</a>: Appears generally
+    as an origin of a ReplyAction.</li> </ul>
     """
     Report = schema_storage["Report"]
     """A Report generated by governmental or non-governmental organization."""
     ReportageNewsArticle = schema_storage["ReportageNewsArticle"]
-    """The <a class="localLink" href="/ReportageNewsArticle">ReportageNewsArticle</a>
-    type is a subtype of <a class="localLink" href="/NewsArticle">NewsArticle</a>
+    """The <a class="localLink" href="#sc.ReportageNewsArticle">ReportageNewsArticle</a>
+    type is a subtype of <a class="localLink" href="#sc.NewsArticle">NewsArticle</a>
     representing news articles which are the result of journalistic news reporting
     conventions.<br/><br/>
 
-    In practice many news publishers produce a wide variety of article types, many of which might be considered a <a class="localLink" href="/NewsArticle">NewsArticle</a> but not a <a class="localLink" href="/ReportageNewsArticle">ReportageNewsArticle</a>. For example, opinion pieces, reviews, analysis, sponsored or satirical articles, or articles that combine several of these elements.<br/><br/>
+    In practice many news publishers produce a wide variety of article types, many of which might be considered a <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> but not a <a class="localLink" href="#sc.ReportageNewsArticle">ReportageNewsArticle</a>. For example, opinion pieces, reviews, analysis, sponsored or satirical articles, or articles that combine several of these elements.<br/><br/>
 
-    The <a class="localLink" href="/ReportageNewsArticle">ReportageNewsArticle</a> type is based on a stricter ideal for "news" as a work of journalism, with articles based on factual information either observed or verified by the author, or reported and verified from knowledgeable sources.  This often includes perspectives from multiple viewpoints on a particular issue (distinguishing news reports from public relations or propaganda).  News reports in the <a class="localLink" href="/ReportageNewsArticle">ReportageNewsArticle</a> sense de-emphasize the opinion of the author, with commentary and value judgements typically expressed elsewhere.<br/><br/>
+    The <a class="localLink" href="#sc.ReportageNewsArticle">ReportageNewsArticle</a> type is based on a stricter ideal for "news" as a work of journalism, with articles based on factual information either observed or verified by the author, or reported and verified from knowledgeable sources.  This often includes perspectives from multiple viewpoints on a particular issue (distinguishing news reports from public relations or propaganda).  News reports in the <a class="localLink" href="#sc.ReportageNewsArticle">ReportageNewsArticle</a> sense de-emphasize the opinion of the author, with commentary and value judgements typically expressed elsewhere.<br/><br/>
 
-    A <a class="localLink" href="/ReportageNewsArticle">ReportageNewsArticle</a> which goes deeper into analysis can also be marked with an additional type of <a class="localLink" href="/AnalysisNewsArticle">AnalysisNewsArticle</a>.
+    A <a class="localLink" href="#sc.ReportageNewsArticle">ReportageNewsArticle</a> which goes deeper into analysis can also be marked with an additional type of <a class="localLink" href="#sc.AnalysisNewsArticle">AnalysisNewsArticle</a>.
     """
     ReportedDoseSchedule = schema_storage["ReportedDoseSchedule"]
     """A patient-reported or observed dosing schedule for a drug or supplement."""
@@ -3766,7 +3757,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """Describes a reservation for travel, dining or an event. Some reservations require
     tickets. <br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     ReservationCancelled = schema_storage["ReservationCancelled"]
     """The status for a previously confirmed reservation that is now cancelled."""
@@ -3786,7 +3777,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ScheduleAction">ScheduleAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.ScheduleAction">ScheduleAction</a>: Unlike
     ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel)
     towards a time slot / spatial allocation.</li> </ul>
     """
@@ -3837,8 +3828,8 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     An agent reviews an object with participants resulting in a review.
     """
     ReviewNewsArticle = schema_storage["ReviewNewsArticle"]
-    """A <a class="localLink" href="/NewsArticle">NewsArticle</a> and <a
-    class="localLink" href="/CriticReview">CriticReview</a> providing a professional
+    """A <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> and <a
+    class="localLink" href="#sc.CriticReview">CriticReview</a> providing a professional
     critic's assessment of a service, product, performance, or artistic or literary
     work."""
     Rheumatologic = schema_storage["Rheumatologic"]
@@ -3897,42 +3888,42 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     product."""
     SatireOrParodyContent = schema_storage["SatireOrParodyContent"]
     """Content coded 'satire or content' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'satire or
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'satire or
     parody content': A video that was created as political or humorous commentary and is
     presented in that context. (Reshares of satire/parody content that do not include
     relevant context are more likely to fall under the “missing context”
     rating.)<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'satire or
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be 'satire or
     parody content': An image that was created as political or humorous commentary and
     is presented in that context. (Reshares of satire/parody content that do not include
     relevant context are more likely to fall under the “missing context”
     rating.)<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'satire or parody content': An image that was created as political or humorous
-    commentary and is presented in that context. (Reshares of satire/parody content that
-    do not include relevant context are more likely to fall under the “missing context”
-    rating.)<br/><br/>
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'satire or parody content': An image that was created as political or
+    humorous commentary and is presented in that context. (Reshares of satire/parody
+    content that do not include relevant context are more likely to fall under the
+    “missing context” rating.)<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'satire or
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be 'satire or
     parody content': Audio that was created as political or humorous commentary and is
     presented in that context. (Reshares of satire/parody content that do not include
     relevant context are more likely to fall under the “missing context” rating.)
     """
     SatiricalArticle = schema_storage["SatiricalArticle"]
-    """An <a class="localLink" href="/Article">Article</a> whose content is primarily <a href="https://en.wikipedia.org/wiki/Satire">[satirical]</a> in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a <a class="localLink" href="/NewsArticle">NewsArticle</a>. <a class="localLink" href="/ScholarlyArticle">ScholarlyArticle</a>s are also sometimes satirized."""
+    """An <a class="localLink" href="#sc.Article">Article</a> whose content is primarily <a href="https://en.wikipedia.org/wiki/Satire">[satirical]</a> in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a <a class="localLink" href="#sc.NewsArticle">NewsArticle</a>. <a class="localLink" href="#sc.ScholarlyArticle">ScholarlyArticle</a>s are also sometimes satirized."""
     Saturday = schema_storage["Saturday"]
     """The day of the week between Friday and Sunday."""
     Schedule = schema_storage["Schedule"]
     """A schedule defines a repeating time period used to describe a regularly occurring
-    <a class="localLink" href="/Event">Event</a>.
+    <a class="localLink" href="#sc.Event">Event</a>.
 
     At a minimum a schedule will specify <a class="localLink"
-    href="/repeatFrequency">repeatFrequency</a> which describes the interval between
+    href="#sc.repeatFrequency">repeatFrequency</a> which describes the interval between
     occurences of the event. Additional information can be provided to specify the
     schedule more precisely. This includes identifying the day(s) of the week or month
     when the recurring event will take place, in addition to its start and end time.
@@ -3944,7 +3935,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ReserveAction">ReserveAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.ReserveAction">ReserveAction</a>: Unlike
     ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc)
     towards a time slot / spatial allocation.</li> </ul>
     """
@@ -3967,7 +3958,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/FindAction">FindAction</a>: SearchAction
+    <ul> <li><a class="localLink" href="#sc.FindAction">FindAction</a>: SearchAction
     generally leads to a FindAction, but not necessarily.</li> </ul>
     """
     SearchResultsPage = schema_storage["SearchResultsPage"]
@@ -3982,10 +3973,10 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """Information about questions that may be asked, when to see a professional,
     measures before seeing a doctor or content about the first consultation."""
     SeekToAction = schema_storage["SeekToAction"]
-    """This is the <a class="localLink" href="/Action">Action</a> of navigating to a
-    specific <a class="localLink" href="/startOffset">startOffset</a> timestamp within a
-    <a class="localLink" href="/VideoObject">VideoObject</a>, typically represented with
-    a URL template structure."""
+    """This is the <a class="localLink" href="#sc.Action">Action</a> of navigating to a
+    specific <a class="localLink" href="#sc.startOffset">startOffset</a> timestamp
+    within a <a class="localLink" href="#sc.VideoObject">VideoObject</a>, typically
+    represented with a URL template structure."""
     SelfCareHealthAspect = schema_storage["SelfCareHealthAspect"]
     """Self care actions or measures that can be taken to sooth, health or avoid a
     topic.
@@ -4004,18 +3995,17 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """The act of physically/electronically dispatching an object for transfer from an
     origin to a destination.Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/ReceiveAction">ReceiveAction</a>: The
+    <ul> <li><a class="localLink" href="#sc.ReceiveAction">ReceiveAction</a>: The
     reciprocal of SendAction.</li> <li><a class="localLink"
-    href="/GiveAction">GiveAction</a>: Unlike GiveAction, SendAction does not imply the
-    transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving
-    it to you).</li> </ul>
+    href="#sc.GiveAction">GiveAction</a>: Unlike GiveAction, SendAction does not imply
+    the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily
+    giving it to you).</li> </ul>
     """
     Series = schema_storage["Series"]
     """A Series in schema.org is a group of related items, typically but not necessarily
     of the same kind.
 
-    See also <a class="localLink" href="/CreativeWorkSeries">CreativeWorkSeries</a>, <a
-    class="localLink" href="/EventSeries">EventSeries</a>.
+    See also <a class="localLink" href="#sc.CreativeWorkSeries">CreativeWorkSeries</a>, <a class="localLink" href="#sc.EventSeries">EventSeries</a>.
     """
     Service = schema_storage["Service"]
     """A service provided by an organization, e.g. delivery service, print services,
@@ -4033,7 +4023,7 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     ShippingRateSettings = schema_storage["ShippingRateSettings"]
     """A ShippingRateSettings represents re-usable pieces of shipping information.
 
-    It is designed for publication on an URL that may be referenced via the <a class="localLink" href="/shippingSettingsLink">shippingSettingsLink</a> property of an <a class="localLink" href="/OfferShippingDetails">OfferShippingDetails</a>. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for <a class="localLink" href="/shippingLabel">shippingLabel</a>.
+    It is designed for publication on an URL that may be referenced via the <a class="localLink" href="#sc.shippingSettingsLink">shippingSettingsLink</a> property of an <a class="localLink" href="#sc.OfferShippingDetails">OfferShippingDetails</a>. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for <a class="localLink" href="#sc.shippingLabel">shippingLabel</a>.
     """
     ShoeStore = schema_storage["ShoeStore"]
     """A shoe store."""
@@ -4063,12 +4053,12 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """Enumerates common size groups for various product categories."""
     SizeSpecification = schema_storage["SizeSpecification"]
     """Size related properties of a product, typically a size code (<a class="localLink"
-    href="/name">name</a>) and optionally a <a class="localLink"
-    href="/sizeSystem">sizeSystem</a>, <a class="localLink"
-    href="/sizeGroup">sizeGroup</a>, and product measurements (<a class="localLink"
-    href="/hasMeasurement">hasMeasurement</a>).
+    href="#sc.name">name</a>) and optionally a <a class="localLink"
+    href="#sc.sizeSystem">sizeSystem</a>, <a class="localLink"
+    href="#sc.sizeGroup">sizeGroup</a>, and product measurements (<a class="localLink"
+    href="#sc.hasMeasurement">hasMeasurement</a>).
 
-    In addition, the intended audience can be defined through <a class="localLink" href="/suggestedAge">suggestedAge</a>, <a class="localLink" href="/suggestedGender">suggestedGender</a>, and suggested body measurements (<a class="localLink" href="/suggestedMeasurement">suggestedMeasurement</a>).
+    In addition, the intended audience can be defined through <a class="localLink" href="#sc.suggestedAge">suggestedAge</a>, <a class="localLink" href="#sc.suggestedGender">suggestedGender</a>, and suggested body measurements (<a class="localLink" href="#sc.suggestedMeasurement">suggestedMeasurement</a>).
     """
     SizeSystemEnumeration = schema_storage["SizeSystemEnumeration"]
     """Enumerates common size systems for different categories of products, for example
@@ -4104,12 +4094,12 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """SoundtrackAlbum."""
     SpeakableSpecification = schema_storage["SpeakableSpecification"]
     """A SpeakableSpecification indicates (typically via <a class="localLink"
-    href="/xpath">xpath</a> or <a class="localLink" href="/cssSelector">cssSelector</a>)
-    sections of a document that are highlighted as particularly <a class="localLink"
-    href="/speakable">speakable</a>.
+    href="#sc.xpath">xpath</a> or <a class="localLink"
+    href="#sc.cssSelector">cssSelector</a>) sections of a document that are highlighted
+    as particularly <a class="localLink" href="#sc.speakable">speakable</a>.
 
     Instances of this type are expected to be used primarily as values of the <a
-    class="localLink" href="/speakable">speakable</a> property.
+    class="localLink" href="#sc.speakable">speakable</a> property.
     """
     SpecialAnnouncement = schema_storage["SpecialAnnouncement"]
     """A SpecialAnnouncement combines a simple date-stamped textual information update
@@ -4133,19 +4123,19 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     "url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known
     URL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20_coronavirus_pandemic" or "https://www.wikidata.org/wiki/Q81068910".<br/><br/>
 
-    For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property's value. For an inline description, use a <a class="localLink" href="/WebContent">WebContent</a> type, and provide the url as a property of that, alongside at least a simple "<a class="localLink" href="/text">text</a>" summary of the page. It is
+    For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property's value. For an inline description, use a <a class="localLink" href="#sc.WebContent">WebContent</a> type, and provide the url as a property of that, alongside at least a simple "<a class="localLink" href="#sc.text">text</a>" summary of the page. It is
     unlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.<br/><br/>
 
-    We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, <a class="localLink" href="/openingHours">openingHours</a>, <a class="localLink" href="/Event">Event</a>, <a class="localLink" href="/FAQPage">FAQPage</a> etc. By linking to those pages from a <a class="localLink" href="/SpecialAnnouncement">SpecialAnnouncement</a> you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the <a class="localLink" href="/category">category</a> property of the <a class="localLink" href="/SpecialAnnouncement">SpecialAnnouncement</a>.<br/><br/>
+    We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, <a class="localLink" href="#sc.openingHours">openingHours</a>, <a class="localLink" href="#sc.Event">Event</a>, <a class="localLink" href="#sc.FAQPage">FAQPage</a> etc. By linking to those pages from a <a class="localLink" href="#sc.SpecialAnnouncement">SpecialAnnouncement</a> you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the <a class="localLink" href="#sc.category">category</a> property of the <a class="localLink" href="#sc.SpecialAnnouncement">SpecialAnnouncement</a>.<br/><br/>
 
-    Many <a class="localLink" href="/SpecialAnnouncement">SpecialAnnouncement</a>s will relate to particular regions and to identifiable local organizations. Use <a class="localLink" href="/spatialCoverage">spatialCoverage</a> for the region, and <a class="localLink" href="/announcementLocation">announcementLocation</a> to indicate specific <a class="localLink" href="/LocalBusiness">LocalBusiness</a>es and <a class="localLink" href="/CivicStructure">CivicStructure</a>s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both <a class="localLink" href="/spatialCoverage">spatialCoverage</a> and <a class="localLink" href="/announcementLocation">announcementLocation</a>.<br/><br/>
+    Many <a class="localLink" href="#sc.SpecialAnnouncement">SpecialAnnouncement</a>s will relate to particular regions and to identifiable local organizations. Use <a class="localLink" href="#sc.spatialCoverage">spatialCoverage</a> for the region, and <a class="localLink" href="#sc.announcementLocation">announcementLocation</a> to indicate specific <a class="localLink" href="#sc.LocalBusiness">LocalBusiness</a>es and <a class="localLink" href="#sc.CivicStructure">CivicStructure</a>s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both <a class="localLink" href="#sc.spatialCoverage">spatialCoverage</a> and <a class="localLink" href="#sc.announcementLocation">announcementLocation</a>.<br/><br/>
 
-    The <a class="localLink" href="/about">about</a> property can be used to indicate entities that are the focus of the announcement. We now recommend using <a class="localLink" href="/about">about</a> only
-    for representing non-location entities (e.g. a <a class="localLink" href="/Course">Course</a> or a <a class="localLink" href="/RadioStation">RadioStation</a>). For places, use <a class="localLink" href="/announcementLocation">announcementLocation</a> and <a class="localLink" href="/spatialCoverage">spatialCoverage</a>. Consumers of this markup should be aware that the initial design encouraged the use of /about for locations too.<br/><br/>
+    The <a class="localLink" href="#sc.about">about</a> property can be used to indicate entities that are the focus of the announcement. We now recommend using <a class="localLink" href="#sc.about">about</a> only
+    for representing non-location entities (e.g. a <a class="localLink" href="#sc.Course">Course</a> or a <a class="localLink" href="#sc.RadioStation">RadioStation</a>). For places, use <a class="localLink" href="#sc.announcementLocation">announcementLocation</a> and <a class="localLink" href="#sc.spatialCoverage">spatialCoverage</a>. Consumers of this markup should be aware that the initial design encouraged the use of /about for locations too.<br/><br/>
 
-    The basic content of <a class="localLink" href="/SpecialAnnouncement">SpecialAnnouncement</a> is similar to that of an <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a> feed. For publishers without such feeds, basic feed-like information can be shared by posting
-    <a class="localLink" href="/SpecialAnnouncement">SpecialAnnouncement</a> updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed
-    with the <a class="localLink" href="/webFeed">webFeed</a> property. This can be a simple URL, or an inline <a class="localLink" href="/DataFeed">DataFeed</a> object, with <a class="localLink" href="/encodingFormat">encodingFormat</a> providing
+    The basic content of <a class="localLink" href="#sc.SpecialAnnouncement">SpecialAnnouncement</a> is similar to that of an <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a> feed. For publishers without such feeds, basic feed-like information can be shared by posting
+    <a class="localLink" href="#sc.SpecialAnnouncement">SpecialAnnouncement</a> updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed
+    with the <a class="localLink" href="#sc.webFeed">webFeed</a> property. This can be a simple URL, or an inline <a class="localLink" href="#sc.DataFeed">DataFeed</a> object, with <a class="localLink" href="#sc.encodingFormat">encodingFormat</a> providing
     media type information e.g. "application/rss+xml" or "application/atom+xml".
     """
     Specialty = schema_storage["Specialty"]
@@ -4176,22 +4166,22 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """A stadium."""
     StagedContent = schema_storage["StagedContent"]
     """Content coded 'staged content' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'staged
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'staged
     content': A video that has been created using actors or similarly
     contrived.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'staged
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be 'staged
     content': An image that was created using actors or similarly contrived, such as a
     screenshot of a fake tweet.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'staged content': An image that was created using actors or similarly
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'staged content': An image that was created using actors or similarly
     contrived, such as a screenshot of a fake tweet.<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'staged
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be 'staged
     content': Audio that has been created using actors or similarly contrived.
     """
     StagesHealthAspect = schema_storage["StagesHealthAspect"]
@@ -4202,9 +4192,9 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
     """A StatisticalPopulation is a set of instances of a certain given type that
     satisfy some set of constraints.
 
-    The property <a class="localLink" href="/populationType">populationType</a> is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a <a class="localLink" href="/StatisticalPopulation">StatisticalPopulation</a> representing all <a class="localLink" href="/Person">Person</a>s with a <a class="localLink" href="/homeLocation">homeLocation</a> of East Podunk California, would be described by applying the appropriate <a class="localLink" href="/homeLocation">homeLocation</a> and <a class="localLink" href="/populationType">populationType</a> properties to a <a class="localLink" href="/StatisticalPopulation">StatisticalPopulation</a> item that stands for that set of people.
-    The properties <a class="localLink" href="/numConstraints">numConstraints</a> and <a class="localLink" href="/constrainingProperty">constrainingProperty</a> are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical
-    population, and does not imply that the population consists of people. For example, a <a class="localLink" href="/populationType">populationType</a> of <a class="localLink" href="/Event">Event</a> or <a class="localLink" href="/NewsArticle">NewsArticle</a> could be used. See also <a class="localLink" href="/Observation">Observation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.
+    The property <a class="localLink" href="#sc.populationType">populationType</a> is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a <a class="localLink" href="#sc.StatisticalPopulation">StatisticalPopulation</a> representing all <a class="localLink" href="#sc.Person">Person</a>s with a <a class="localLink" href="#sc.homeLocation">homeLocation</a> of East Podunk California, would be described by applying the appropriate <a class="localLink" href="#sc.homeLocation">homeLocation</a> and <a class="localLink" href="#sc.populationType">populationType</a> properties to a <a class="localLink" href="#sc.StatisticalPopulation">StatisticalPopulation</a> item that stands for that set of people.
+    The properties <a class="localLink" href="#sc.numConstraints">numConstraints</a> and <a class="localLink" href="#sc.constrainingProperty">constrainingProperty</a> are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical
+    population, and does not imply that the population consists of people. For example, a <a class="localLink" href="#sc.populationType">populationType</a> of <a class="localLink" href="#sc.Event">Event</a> or <a class="localLink" href="#sc.NewsArticle">NewsArticle</a> could be used. See also <a class="localLink" href="#sc.Observation">Observation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.
     """
     StatusEnumeration = schema_storage["StatusEnumeration"]
     """Lists or enumerations dealing with status types."""
@@ -4232,12 +4222,12 @@ The general <a class="localLink" href="/ProfessionalService">ProfessionalService
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/FollowAction">FollowAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.FollowAction">FollowAction</a>: Unlike
     FollowAction, SubscribeAction implies that the subscriber acts as a passive agent
     being constantly/actively pushed for updates.</li> <li><a class="localLink"
-    href="/RegisterAction">RegisterAction</a>: Unlike RegisterAction, SubscribeAction
+    href="#sc.RegisterAction">RegisterAction</a>: Unlike RegisterAction, SubscribeAction
     implies that the agent is interested in continuing receiving updates from the
-    object.</li> <li><a class="localLink" href="/JoinAction">JoinAction</a>: Unlike
+    object.</li> <li><a class="localLink" href="#sc.JoinAction">JoinAction</a>: Unlike
     JoinAction, SubscribeAction implies that the agent is interested in continuing
     receiving updates from the object.</li> </ul>
     """
@@ -4306,10 +4296,10 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/GiveAction">GiveAction</a>: The reciprocal of
-    TakeAction.</li> <li><a class="localLink" href="/ReceiveAction">ReceiveAction</a>:
-    Unlike ReceiveAction, TakeAction implies that ownership has been transfered.</li>
-    </ul>
+    <ul> <li><a class="localLink" href="#sc.GiveAction">GiveAction</a>: The reciprocal
+    of TakeAction.</li> <li><a class="localLink"
+    href="#sc.ReceiveAction">ReceiveAction</a>: Unlike ReceiveAction, TakeAction implies
+    that ownership has been transfered.</li> </ul>
     """
     TattooParlor = schema_storage["TattooParlor"]
     """A tattoo parlor."""
@@ -4318,7 +4308,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     TaxiReservation = schema_storage["TaxiReservation"]
     """A reservation for a taxi.<br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     TaxiService = schema_storage["TaxiService"]
     """A service for a vehicle for hire with a driver for local travel.
@@ -4379,27 +4369,12 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     TouristAttraction = schema_storage["TouristAttraction"]
     """A tourist attraction.
 
-    In principle any Thing can be a <a class="localLink" href="/TouristAttraction">TouristAttraction</a>, from a <a class="localLink" href="/Mountain">Mountain</a> and <a class="localLink" href="/LandmarksOrHistoricalBuildings">LandmarksOrHistoricalBuildings</a> to a <a class="localLink" href="/LocalBusiness">LocalBusiness</a>.  This Type can be used on its own to describe a general <a class="localLink" href="/TouristAttraction">TouristAttraction</a>, or be used as an <a class="localLink" href="/additionalType">additionalType</a> to add tourist attraction properties to any other type.  (See examples below)
+    In principle any Thing can be a <a class="localLink" href="#sc.TouristAttraction">TouristAttraction</a>, from a <a class="localLink" href="#sc.Mountain">Mountain</a> and <a class="localLink" href="#sc.LandmarksOrHistoricalBuildings">LandmarksOrHistoricalBuildings</a> to a <a class="localLink" href="#sc.LocalBusiness">LocalBusiness</a>.  This Type can be used on its own to describe a general <a class="localLink" href="#sc.TouristAttraction">TouristAttraction</a>, or be used as an <a class="localLink" href="#sc.additionalType">additionalType</a> to add tourist attraction properties to any other type.  (See examples below)
     """
     TouristDestination = schema_storage["TouristDestination"]
     """A tourist destination.
 
-    In principle any <a class="localLink" href="/Place">Place</a> can be a <a
-    class="localLink" href="/TouristDestination">TouristDestination</a> from a <a
-    class="localLink" href="/City">City</a>, Region or <a class="localLink"
-    href="/Country">Country</a> to an <a class="localLink"
-    href="/AmusementPark">AmusementPark</a> or <a class="localLink"
-    href="/Hotel">Hotel</a>. This Type can be used on its own to describe a general <a
-    class="localLink" href="/TouristDestination">TouristDestination</a>, or be used as
-    an <a class="localLink" href="/additionalType">additionalType</a> to add tourist
-    relevant properties to any other <a class="localLink" href="/Place">Place</a>.  A <a
-    class="localLink" href="/TouristDestination">TouristDestination</a> is defined as a
-    <a class="localLink" href="/Place">Place</a> that contains, or is colocated with,
-    one or more <a class="localLink" href="/TouristAttraction">TouristAttraction</a>s,
-    often linked by a similar theme or interest to a particular <a class="localLink"
-    href="/touristType">touristType</a>. The <a href="
-    http://www2.unwto.org/">UNWTO</a>
-    defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.
+    In principle any <a class="localLink" href="#sc.Place">Place</a> can be a <a class="localLink" href="#sc.TouristDestination">TouristDestination</a> from a <a class="localLink" href="#sc.City">City</a>, Region or <a class="localLink" href="#sc.Country">Country</a> to an <a class="localLink" href="#sc.AmusementPark">AmusementPark</a> or <a class="localLink" href="#sc.Hotel">Hotel</a>. This Type can be used on its own to describe a general <a class="localLink" href="#sc.TouristDestination">TouristDestination</a>, or be used as an <a class="localLink" href="#sc.additionalType">additionalType</a> to add tourist relevant properties to any other <a class="localLink" href="#sc.Place">Place</a>.  A <a class="localLink" href="#sc.TouristDestination">TouristDestination</a> is defined as a <a class="localLink" href="#sc.Place">Place</a> that contains, or is colocated with, one or more <a class="localLink" href="#sc.TouristAttraction">TouristAttraction</a>s, often linked by a similar theme or interest to a particular <a class="localLink" href="#sc.touristType">touristType</a>. The <a href="http://www2.unwto.org/">UNWTO</a> defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.
     (See examples below).
     """
     TouristInformationCenter = schema_storage["TouristInformationCenter"]
@@ -4407,13 +4382,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     TouristTrip = schema_storage["TouristTrip"]
     """A tourist trip.
 
-    A created itinerary of visits to one or more places of interest (<a
-    class="localLink" href="/TouristAttraction">TouristAttraction</a>/<a
-    class="localLink" href="/TouristDestination">TouristDestination</a>) often linked by
-    a similar theme, geographic area, or interest to a particular <a class="localLink"
-    href="/touristType">touristType</a>. The <a href="
-    http://www2.unwto.org/">UNWTO</a>
-    defines tourism trip as the Trip taken by visitors.
+    A created itinerary of visits to one or more places of interest (<a class="localLink" href="#sc.TouristAttraction">TouristAttraction</a>/<a class="localLink" href="#sc.TouristDestination">TouristDestination</a>) often linked by a similar theme, geographic area, or interest to a particular <a class="localLink" href="#sc.touristType">touristType</a>. The <a href="http://www2.unwto.org/">UNWTO</a> defines tourism trip as the Trip taken by visitors.
     (See examples below).
     """
     Toxicologic = schema_storage["Toxicologic"]
@@ -4426,11 +4395,11 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/FollowAction">FollowAction</a>: Unlike
+    <ul> <li><a class="localLink" href="#sc.FollowAction">FollowAction</a>: Unlike
     FollowAction, TrackAction refers to the interest on the location of innanimates
-    objects.</li> <li><a class="localLink" href="/SubscribeAction">SubscribeAction</a>:
-    Unlike SubscribeAction, TrackAction refers to  the interest on the location of
-    innanimate objects.</li> </ul>
+    objects.</li> <li><a class="localLink"
+    href="#sc.SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, TrackAction
+    refers to  the interest on the location of innanimate objects.</li> </ul>
     """
     TradeAction = schema_storage["TradeAction"]
     """The act of participating in an exchange of goods and services for monetary
@@ -4446,7 +4415,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     TrainReservation = schema_storage["TrainReservation"]
     """A reservation for train travel.<br/><br/>
 
-    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="/Offer">Offer</a>.
+    Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a class="localLink" href="#sc.Offer">Offer</a>.
     """
     TrainStation = schema_storage["TrainStation"]
     """A train station."""
@@ -4457,27 +4426,27 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     objects from one place to another."""
     TransformedContent = schema_storage["TransformedContent"]
     """Content coded 'transformed content' in a <a class="localLink"
-    href="/MediaReview">MediaReview</a>, considered in the context of how it was
+    href="#sc.MediaReview">MediaReview</a>, considered in the context of how it was
     published or shared.<br/><br/>
 
-    For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'transformed
+    For a <a class="localLink" href="#sc.VideoObject">VideoObject</a> to be 'transformed
     content':  or all of the video has been manipulated to transform the footage itself.
     This category includes using tools like the Adobe Suite to change the speed of the
     video, add or remove visual elements or dub audio. Deepfakes are also a subset of
     transformation.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> to be transformed
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> to be transformed
     content': Adding or deleting visual elements to give the image a different meaning
     with the intention to mislead.<br/><br/>
 
-    For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text
-    to be 'transformed content': Adding or deleting visual elements to give the image a
-    different meaning with the intention to mislead.<br/><br/>
+    For an <a class="localLink" href="#sc.ImageObject">ImageObject</a> with embedded
+    text to be 'transformed content': Adding or deleting visual elements to give the
+    image a different meaning with the intention to mislead.<br/><br/>
 
-    For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'transformed
-    content': Part or all of the audio has been manipulated to alter the words or
-    sounds, or the audio has been synthetically generated, such as to create a sound-
-    alike voice.
+    For an <a class="localLink" href="#sc.AudioObject">AudioObject</a> to be
+    'transformed content': Part or all of the audio has been manipulated to alter the
+    words or sounds, or the audio has been synthetically generated, such as to create a
+    sound-alike voice.
     """
     TransitMap = schema_storage["TransitMap"]
     """A transit map."""
@@ -4523,11 +4492,11 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
     Related actions:<br/><br/>
 
-    <ul> <li><a class="localLink" href="/RegisterAction">RegisterAction</a>: antonym of
-    UnRegisterAction.</li> <li><a class="localLink" href="/LeaveAction">LeaveAction</a>:
-    Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a
-    service you werer previously registered, rather than leaving a team/group of
-    people.</li> </ul>
+    <ul> <li><a class="localLink" href="#sc.RegisterAction">RegisterAction</a>: antonym
+    of UnRegisterAction.</li> <li><a class="localLink"
+    href="#sc.LeaveAction">LeaveAction</a>: Unlike LeaveAction, UnRegisterAction implies
+    that you are unregistering from a service you werer previously registered, rather
+    than leaving a team/group of people.</li> </ul>
     """
     UnemploymentSupport = schema_storage["UnemploymentSupport"]
     """UnemploymentSupport: this is a benefit for unemployment support."""
@@ -4555,84 +4524,84 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserCheckins = schema_storage["UserCheckins"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserComments = schema_storage["UserComments"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserDownloads = schema_storage["UserDownloads"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserInteraction = schema_storage["UserInteraction"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserLikes = schema_storage["UserLikes"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserPageVisits = schema_storage["UserPageVisits"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserPlays = schema_storage["UserPlays"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserPlusOnes = schema_storage["UserPlusOnes"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     UserReview = schema_storage["UserReview"]
     """A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in
-    contrast with <a class="localLink" href="/CriticReview">CriticReview</a>."""
+    contrast with <a class="localLink" href="#sc.CriticReview">CriticReview</a>."""
     UserTweets = schema_storage["UserTweets"]
     """UserInteraction and its subtypes is an old way of talking about users interacting
     with pages.
 
-    It is generally better to use <a class="localLink" href="/Action">Action</a>-based
-    vocabulary, alongside types such as <a class="localLink"
-    href="/Comment">Comment</a>.
+    It is generally better to use <a class="localLink"
+    href="#sc.Action">Action</a>-based vocabulary, alongside types such as <a
+    class="localLink" href="#sc.Comment">Comment</a>.
     """
     VeganDiet = schema_storage["VeganDiet"]
     """A diet exclusive of all animal products."""
@@ -4823,17 +4792,18 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     """Web applications."""
     WebContent = schema_storage["WebContent"]
     """WebContent is a type representing all <a class="localLink"
-    href="/WebPage">WebPage</a>, <a class="localLink" href="/WebSite">WebSite</a> and <a
-    class="localLink" href="/WebPageElement">WebPageElement</a> content.
+    href="#sc.WebPage">WebPage</a>, <a class="localLink" href="#sc.WebSite">WebSite</a>
+    and <a class="localLink" href="#sc.WebPageElement">WebPageElement</a> content.
 
     It is sometimes the case that detailed distinctions between Web pages, sites and
     their parts is not always important or obvious. The  <a class="localLink"
-    href="/WebContent">WebContent</a> type makes it easier to describe Web-addressable
-    content without requiring such distinctions to always be stated. (The intent is that
-    the existing types <a class="localLink" href="/WebPage">WebPage</a>, <a
-    class="localLink" href="/WebSite">WebSite</a> and <a class="localLink"
-    href="/WebPageElement">WebPageElement</a> will eventually be declared as subtypes of
-    <a class="localLink" href="/WebContent">WebContent</a>).
+    href="#sc.WebContent">WebContent</a> type makes it easier to describe Web-
+    addressable content without requiring such distinctions to always be stated. (The
+    intent is that the existing types <a class="localLink"
+    href="#sc.WebPage">WebPage</a>, <a class="localLink" href="#sc.WebSite">WebSite</a>
+    and <a class="localLink" href="#sc.WebPageElement">WebPageElement</a> will
+    eventually be declared as subtypes of <a class="localLink"
+    href="#sc.WebContent">WebContent</a>).
     """
     WebPage = schema_storage["WebPage"]
     """A web page.
