@@ -69,11 +69,11 @@ class sc(_sc):
     Examples
     --------
     >>> sc.Float
-    Float
+    sc:Float
     >>> sc.parse('sc:Float')
-    Float
+    sc:Float
     >>> sc._True
-    True
+    sc:True
     >>> sc.parse('sc:Floatt')
     Traceback (most recent call last):
         ...
@@ -126,6 +126,7 @@ class sc(_sc):
 
 class _FrozenABCMeta(ABCMeta):
     def __call__(cls, *args, **kwargs):
+        # TODO change type to ABCMeta
         obj = type.__call__(cls, *args, **kwargs)
         obj._freeze(*args, **kwargs)
         return obj

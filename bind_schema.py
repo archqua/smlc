@@ -61,13 +61,15 @@ def read_csv(filename, mode="r", delim=",", header=None, keyfield=None):
 
 
 if __name__ == "__main__":
-    binding_storage = os.path.join(root, binding_storage)
+    binding_storage_path = os.path.join(root, binding_storage)
     binding_path = os.path.join(root, binding_path)
-    link_corrector = re.compile(r'(<a class="localLink" href=")(/)(\w+)(">\3</a>)')
+    local_link_corrector = re.compile(
+        r'(<a class="localLink" href=")(/)(\w+)(">\3</a>)'
+    )
     dttm = datetime.datetime.now(tz=datetime.timezone.utc)
     heading = (
         '"""\n'
-        f"This file was automatically generated at {dttm.isoformat(sep=' ', timespec='seconds')}.\n"
+        f"This file was automatically generated at {dttm.isoformat(timespec='seconds')}.\n"
         "\n"
         "Documentation may not function properly.\n"
         "\n"
@@ -75,18 +77,44 @@ if __name__ == "__main__":
         '"""\n'
         '__docformat__ = "numpy"\n'
         "\n"
+        "from copy import deepcopy\n"
+        "import os\n"
         "import pickle\n"
-        "from typing import Type\n"
+        "from typing import Type, Union\n"
         "\n"
         "import schemaorg.main\n"
         "\n"
-        "Schema: Type = schemaorg.main.Schema\n"
+        "Schemaorg: Type = schemaorg.main.Schema\n"
+        "\n"
+        "\n"
+        "def _copyattrs(dst, src):\n"
+        "    for an, av in vars(src).items():\n"
+        "        setattr(dst, an, deepcopy(av))\n"
+        "    return dst\n"
+        "\n"
+        "\n"
+        "class Schema(Schemaorg):\n"
+        '    """Wrapper for `Schemaorg`. Prepends "sc:" to formatted type names."""\n'
+        "    def __init__(self, schema: Union[str, schemaorg.main.Schema], *args, **kwargs):\n"
+        "        if isinstance(schema, schemaorg.main.Schema):\n"
+        "            schelf = schema\n"
+        "        else:\n"
+        "            schelf = schemaorg.main.Schema(schema, *args, **kwargs)\n"
+        "        _copyattrs(self, schelf)\n"
+        "\n"
+        "    def __str__(self):\n"
+        '        return "sc:" + super(Schema, self).__str__()\n'
+        "\n"
+        "    def __repr__(self):\n"
+        "        return str(self)\n"
+        "\n"
+        "\n"
     )
     if not Path(csv_path).is_file():
         load_types()
     types = read_csv(csv_path, keyfield="label")
     msg_lvl = scl.message.bot.level
-    if not Path(binding_storage).is_file():
+    if not Path(binding_storage_path).is_file():
         storage_dict = dict()
         scl.message.bot.level = scl.message.WARNING
         from sys import getsizeof
@@ -95,15 +123,19 @@ if __name__ == "__main__":
             sanity_check = scm.Schema(t)
             storage_dict[t] = sanity_check
         scl.message.bot.level = msg_lvl
-        with open(binding_storage, "wb") as sf:
+        with open(binding_storage_path, "wb") as sf:
             pickle.dump(storage_dict, sf)
     else:
-        with open(binding_storage, "rb") as sf:
+        with open(binding_storage_path, "rb") as sf:
             storage_dict = pickle.load(sf)
     with open(binding_path, "w") as of:
         print(heading, file=of)
-        print(f'with open("{binding_storage}", "rb") as sf:', file=of)
+        print(
+            f'with open(os.path.join("{root}", "{binding_storage}"), "rb") as sf:',
+            file=of,
+        )
         print("    schema_storage = pickle.load(sf)", file=of)
+        print("\n", file=of)
         print("class sc:", file=of)
         print('    """', file=of)
         print(
@@ -122,26 +154,25 @@ if __name__ == "__main__":
             '        tkns = tn.split(":")\n'
             "        if raise_not_sc:\n"
             '            assert tkns[0] == "sc", "Type annotation must start with \'sc:\'"\n'
-            "        return getattr(sc, tkns[-1])\n",
+            "        t = tkns[-1]\n"
+            '        if t in ["True", "False", "3DModel"]:\n'
+            '            t = "_" + t\n'
+            "        return getattr(sc, t)\n",
             file=of,
         )
         for t in types:
             comment = storage_dict[t].comment
-            comment, _ = link_corrector.subn(r"\1#sc.\3\4", comment)
+            comment, _ = local_link_corrector.subn(r"\1#sc.\3\4", comment)
             if t.isidentifier() and t != str(True) and t != str(False):
-                print(f'    {t} = schema_storage["{t}"]', file=of)
+                print(f'    {t} = Schema(schema_storage["{t}"])', file=of)
                 print(f'    """{comment}"""', file=of)
             else:
                 print(f"{t} is not a valid identifier T_T")
                 if ("_" + t).isidentifier():
                     print(f"    It was replaced with {'_' + t}")
-                    print(f"    {'_' + t} = schema_storage[\"{t}\"]", file=of)
+                    print(f"    {'_' + t} = Schema(schema_storage[\"{t}\"])", file=of)
                     print(f'    """@public {comment}"""', file=of)
                 else:
                     print("    Can't fix, skipping...")
+        print("\n", file=of)
         print("del schema_storage", file=of)
-        # with open(os.devnull, "w") as devnull:
-        #     if subprocess.call(["python", "-c", "import black"], stderr=devnull) == 0:
-        #         print(f"{subprocess.call(["python", "-m", "black", binding_path])}")
-        #     else:
-        #         print("black not available, skipping...")
